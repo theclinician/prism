@@ -1,0 +1,24 @@
+{
+  "name": "@zedoc/prism-demo",
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "proxy": "rinetd -f -c ./config/rinetd.conf",
+    "lint": "eslint src/**",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@fontsource/fira-mono": "5.0.8",
+    "@fontsource-variable/signika": "5.0.18",
+    "@solidjs/router": "0.10.6",
+    "@zedoc/prism": "workspace:*",
+    "solid-js": "1.8.8"
+  },
+  "devDependencies": {
+    "sass": "1.69.7",
+    "typescript": "5.3.3",
+    "vite": "5.0.11",
+    "vite-plugin-solid": "2.8.0"
+  }
+}

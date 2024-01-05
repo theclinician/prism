@@ -1,5 +1,5 @@
 import { JSX, children as useChildren } from "solid-js";
-import { Color } from "$/packages/prism/utils/Color";
+import { Color } from "$/utils/Color";
 import style from "./Button.module.scss";
 import useProps from "../utils/useProps";
 import { Dynamic } from "solid-js/web";

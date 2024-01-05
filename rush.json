@@ -344,7 +344,15 @@
   "projects": [
     {
       "packageName": "@zedoc/prism",
-      "projectFolder": "packages/prism"
+      "projectFolder": "packages/prism",
+      "tags": ["package"],
+      "shouldPublish": true
+      // "reviewCategory": "tools",
+      // "tags": [ "tools" ]
+    },
+    {
+      "packageName": "@zedoc/prism-demo",
+      "projectFolder": "projects/demo"
       // "reviewCategory": "tools",
       // "tags": [ "tools" ]
     }
