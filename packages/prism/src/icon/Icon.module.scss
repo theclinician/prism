@@ -1,0 +1,29 @@
+.icon {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.tiny {
+  width: 16px;
+  height: 16px;
+}
+
+.small {
+  width: 24px;
+  height: 24px;
+}
+
+.medium {
+  width: 48px;
+  height: 48px;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+  // fill: var(--text-primary);
+  // stroke: var(--text-primary);
+  stroke-width: 0;
+}

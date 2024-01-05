@@ -1,0 +1,17 @@
+.float {
+  position: absolute;
+  top: 0px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  right: 0px;
+}
+
+.left {
+  left: 0px;
+}

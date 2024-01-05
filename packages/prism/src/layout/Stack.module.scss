@@ -1,0 +1,34 @@
+.hstack {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vstack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vstretch {
+  min-height: 100%;
+  // ju
+}
+
+.mstack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.zstack {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+  

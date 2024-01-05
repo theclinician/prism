@@ -1,0 +1,13 @@
+.well {
+  width: 100%;
+
+
+  padding: 16px;
+  background: var(--background-default);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+}

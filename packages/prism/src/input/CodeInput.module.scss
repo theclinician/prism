@@ -1,0 +1,40 @@
+@import "$/style/preamble.scss";
+
+.codeInput {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.input {
+  @include font-body-regular;
+
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  border-radius: 4px;
+  border: 1px solid var(--line-default);
+  background-color: var(--background-higher);
+
+  color: var(--text-primary);
+
+
+
+  &:focus, &:active {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--text-primary);
+  }
+}

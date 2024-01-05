@@ -65,7 +65,7 @@ node_modules/
 
 # Rush temporary files
 # common/deploy/
-# common/temp/
+common/temp/
 # common/autoinstallers/*/.npmrc
 # **/.rush/temp/
 # *.lock

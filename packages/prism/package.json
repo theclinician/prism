@@ -1,0 +1,13 @@
+{
+  "name": "@zedoc/prism",
+  "version": "0.0.0",
+  "scripts": {
+  },
+  "dependencies": {
+    "solid-js": "1.8.7"
+  },
+  "devDependencies": {
+    "sass": "1.69.5",
+    "typescript": "5.3.3"
+  }
+}
