@@ -2,35 +2,18 @@
 import { render } from "solid-js/web"
 import { Router } from "@solidjs/router";
 import { Button, PrismWrap } from "@zedoc/prism";
-import '@zedoc/prism/dist/style.css';
 
-// import { routes } from "$/app/routes";
-// import { TranslationContextProvider } from "$p/solid-i18next";
-// import { PrismWrap } from "$p/prism";
-// import translationResources from "TRANSLATIONS.json";
-// import { AppMenuProvider, DropdownProvider } from "$b/appMenu";
+import "@fontsource/fira-mono";
+import "@fontsource-variable/signika";
+import "@zedoc/prism/dist/style.css";
 
-// import "./index.scss";
-
+import { routes } from "$/app/routes";
 
 render(() => (
     <PrismWrap>
-  <div>
-
-    <Button>Boo</Button>
-    Blah!
-  </div>
+      <Router>
+        {routes}
+      </Router>
     </PrismWrap>
-  // <PrismWrap>
-  //   <TranslationContextProvider resources={translationResources}>
-  //     <AppMenuProvider>
-  //       <DropdownProvider>
-  //         <Router>
-  //           {routes}
-  //         </Router>
-  //       </DropdownProvider>
-  //     </AppMenuProvider>
-  //   </TranslationContextProvider>
-  // </PrismWrap>
 ), document.getElementById("root")!)
 
