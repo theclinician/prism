@@ -3,6 +3,8 @@ import { render } from "solid-js/web"
 import { Router } from "@solidjs/router";
 import { Button, PrismWrap } from "@zedoc/prism";
 
+import "./theme-light.scss";
+
 import "@fontsource/fira-mono";
 import "@fontsource-variable/signika";
 import "@zedoc/prism/dist/style.css";

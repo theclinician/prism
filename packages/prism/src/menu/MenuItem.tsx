@@ -1,4 +1,5 @@
 import { JSX, children as useChildren } from "solid-js";
+import { Dynamic } from "solid-js/web";
 import style from "./Menu.module.scss";
 import useProps from "$/utils/useProps";
 
@@ -8,6 +9,7 @@ type Props = {
   title?: string | null,
   onClick?: null | (() => void), 
   action?: null | (() => void),
+  href?: undefined | null | string,
 };
 
 const defaultProps: Required<Props> = {
@@ -15,6 +17,7 @@ const defaultProps: Required<Props> = {
   title: null,
   onClick: null,
   action: null,
+  href: null,
 };
 
 
@@ -28,7 +31,9 @@ const MenuItem = (allProps: Props & JSX.IntrinsicElements['div']) => {
   }
 
   return (
-    <div
+    <Dynamic
+      component={props.href ? "a" : "button"}
+      href={props.href ?? undefined}
       classList={{
         [style.item]: true,
       }}
@@ -36,7 +41,7 @@ const MenuItem = (allProps: Props & JSX.IntrinsicElements['div']) => {
       {...other}
     >
       {c()}
-    </div>
+    </Dynamic>
   );
 }
 

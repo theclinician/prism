@@ -1,7 +1,7 @@
 import { JSX, children as useChildren } from "solid-js";
 import "$/style/reset.scss";
+import "$/style/main.scss";
 import "$/style/theme.scss";
-
 
 const PrismWrap = (props: {
   children?: JSX.Element,

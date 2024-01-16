@@ -1,4 +1,12 @@
 body {
+  --font-header: "Signika", sans-serif;
+  --font-body: "Signika", sans-serif;
+  --font-mono: "Fira Mono", monospace;
+
+  
+
+
+
   --color-brand: hsl(220, 80%, 29%); // #0F3689
   --color-hover: hsl(221, 80%, 23%); // #0C2B6E;
   --color-disabled: hsl(224, 9%, 83%); // #D2D4DA;
@@ -26,28 +34,5 @@ body {
   --line-section: hsl(210, 10%, 88%); // #DFE2E5;
   --line-header: hsl(212, 11%, 77%); // #BFC5CC;
 
-  &.dark-mode {
-    --color-brand: #3390FF;
-    --color-hover: #55A2FF;
-    --color-disabled: #73787F;
-    --color-error: #E20000;
-    --color-warning: #FF7701;
-    --color-success: #79C346;
-    --outline: 2px dotted #E20000;
-    
-    --text-primary: #FFFFFF;
-    --text-secondary: #E2E3E4;
-    --text-gray: #A5A8AC;
-    --text-disabled: #73787F;
-    --text-inverse: hsl(0, 0%, 100%);
-    
-    --background-default: #1F2937;
-    --background-hover: #222A38;
-    --icon-outline: #3390FF;
-    --icon-active: #FFFFFF;
-    --icon-disabled: #73787F;
-    --line-default: #A5A8AC;
-    --line-section: #E2E3E4;
-    --line-header: #FFFFFF;
-  }
 }
+

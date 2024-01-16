@@ -14,6 +14,8 @@ import {
   Card,
   Modal,
 } from "@zedoc/prism";
+import Code from "$/blocks/example/Code";
+import Demo from "$/blocks/example/Demo";
 
 
 export const SinkButtons = () => {
@@ -24,24 +26,26 @@ export const SinkButtons = () => {
   return (
     <Card>
       <Padded>
-        <div style={{"font-family": "'Fira Mono', monospace", "white-space": "pre"}}>
+        <Code>
           {`
             <Button
               look={ButtonLook.FILL}
               color={Color.PRIMARY}
               onClick={handleClick}
             >
-              Fill
-            </Button>  
+              Button
+            </Button>
           `}
-        </div>
-        <Button
-          look={ButtonLook.FILL}
-          color={Color.PRIMARY}
-          onClick={handleClick}
-        >
-          Fill
-        </Button>
+        </Code>
+        <Demo>
+          <Button
+            look={ButtonLook.FILL}
+            color={Color.PRIMARY}
+            onClick={handleClick}
+          >
+            Fill
+          </Button>
+        </Demo>
         <Button
           look={ButtonLook.FILL}
           color={Color.PRIMARY}

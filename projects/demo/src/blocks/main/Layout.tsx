@@ -6,16 +6,18 @@ import {
   Heading3,
   Tabs,
   Tab,
-  useTabs,
+  Scroll,
   Padded,
   HStack,
-  VStack,
-  MStack,
+  Centered,
+  Separator,
   TBD,
   Card,
   Modal,
   Mobile,
 } from "@zedoc/prism";
+
+import Menu from "./Menu"
 
 export type Props = {
   children?: JSX.Element;
@@ -25,24 +27,19 @@ export const Layout = (props: Props) => {
   const c = useChildren(() => props.children)
 
   return (
-    <HStack>
-      <Mobile>
-        <VStack>
-          <Button href="/buttons">Buttons</Button>
-          <Button href="/inputs">Inputs</Button>
-          <Button href="/icons">Icons</Button>
-        </VStack>
-      </Mobile>
-      <Mobile>
-        <Card>
-          <Padded>
-            Layout
-          </Padded>
-          <Padded>
-            {c()}
-          </Padded>
-        </Card>
-      </Mobile>
+    <HStack tall>
+      <HStack tall style={{"max-width": "1536px"}}>
+        <Scroll style={{"max-width": "240px"}}>
+          <Menu/>
+          <Separator/>
+        </Scroll>
+        <Separator/>
+        <Scroll style={{"max-width": "720px"}}>
+          {c()}
+          <Separator/>
+        </Scroll>
+        <Separator/>
+      </HStack>
     </HStack>
   );
 }
