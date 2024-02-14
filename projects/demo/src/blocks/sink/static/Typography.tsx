@@ -7,24 +7,23 @@ import {
   Tab,
   useTabs,
   Padded,
-  Scroll,
+  HStack,
   VStack,
   MStack,
   TBD,
   Card,
   Modal,
 } from "@zedoc/prism";
-import { Code, Demo, Example } from "$/blocks/example";
 
 
 export const Template = () => {
   
   return (
-    <Scroll>
-      <Example>
+    <Card>
+      <Padded>
         Template
-      </Example>
-    </Scroll>
+      </Padded>
+    </Card>
   );
 }
 

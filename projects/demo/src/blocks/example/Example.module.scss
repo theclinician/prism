@@ -1,0 +1,25 @@
+
+.token {
+  display: inline;
+}
+.operatorToken {
+  color: #eee;
+}
+.bracketToken {
+  color: #4A9DF8;
+}
+.tagToken {
+  color: #FD3E7D;
+}
+.propToken {
+  color: #BBEA56;
+}
+.valueToken {
+  color: #E5DC83;
+}
+.contentToken {
+  color: #8D8976;
+}
+.emptyToken, .unknownToken {
+  color: #82D2E7;
+}

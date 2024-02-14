@@ -17,6 +17,7 @@ import {
   MenuGroup,
 } from "@zedoc/prism";
 import { Separator } from "@zedoc/prism";
+import { Card } from "@zedoc/prism";
 
 export type Props = {
 }
@@ -26,23 +27,73 @@ export const Layout = (props: Props) => {
     <Menu
       style={{"height": "100%"}}
     >
+      <img
+        src="/dark_prism.png"
+        style={{
+          width: "100%"
+        }}
+      />
+      <Card>
+        Prism
+        <div>
+          A good looking Solid.
+        </div>
+      </Card>
 
-      <MenuGroup title="Layout">
+      {/* 
+      <MenuGroup title="Body">
+        <MenuItem
+          href="/body"
+        >
+          •••
+        </MenuItem>
       </MenuGroup>
       
+      <MenuGroup title="Layout">
+        <MenuItem
+          href="/layout"
+        >
+          •••
+        </MenuItem>
+      </MenuGroup>
+      */}
+      
       <MenuGroup title="Composition">
+        <MenuItem
+          href="/Composition"
+        >
+          •••
+        </MenuItem>
       </MenuGroup>
 
-      <MenuGroup title="Static">
+      <MenuGroup
+        title="Static"
+        href="/static"
+      >
         <MenuItem
-          href="/icons"
+          href="/divider"
         >
-          Typography
+          Divider
         </MenuItem>
         <MenuItem
           href="/icons"
         >
           Icons
+        </MenuItem>
+        <MenuItem
+          href="/spinner"
+        >
+          Spinner
+        </MenuItem>
+        <MenuItem
+          href="/tbd"
+        >
+          TBD
+        </MenuItem>
+        <MenuItem
+          href="/typography"
+        >
+          Typography
         </MenuItem>
       </MenuGroup>
 
@@ -65,7 +116,25 @@ export const Layout = (props: Props) => {
       <MenuGroup title="Data display">
       </MenuGroup>
 
-      <MenuGroup title="Common elements">
+      <MenuGroup
+        title="Parts"
+        href="/parts"
+      >
+        <MenuItem
+          href="/feed"
+        >
+          Feed
+        </MenuItem>
+        <MenuItem
+          href="/menu"
+        >
+          Menu
+        </MenuItem>
+        <MenuItem
+          href="/modal"
+        >
+          Modal
+        </MenuItem>
       </MenuGroup>
 
       <MenuGroup title="Theme">

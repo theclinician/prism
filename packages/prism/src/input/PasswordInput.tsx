@@ -1,7 +1,7 @@
 import { JSX, batch, createEffect, createSignal } from "solid-js";
 import style from "./Input.module.scss";
 import useProps from "$/utils/useProps";
-import { Icon, I, IconSize } from "$/icon/Icon";
+import { Icon, I, IconSize } from "$/static/icon/Icon";
 
 type Props = {
   name: string,

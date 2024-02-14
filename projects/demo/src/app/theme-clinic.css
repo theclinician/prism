@@ -1,0 +1,45 @@
+body {
+
+  --clinic-brand-base: #0F3689;
+  --clinic-brand-hover: #0C2B6E;
+  --clinic-brand-disabled: #D2D4DA;
+
+  --clinic-text-base: #1C1E21;
+  --clinic-text-secondary: #393B3E;
+  --clinic-text-gray: #77787A;
+  --clinic-text-disabled: #A9AAAB;
+
+  --clinic-line-default: #EFEFF1;
+  --clinic-line-section: #DFE2E5;
+  --clinic-line-header: #BFC5CC;
+
+  --clinic-background-base: #F8F9FA;
+  --clinic-background-hover: #FCFDFD;
+  --clinic-background-higher: #FFFFFF;
+
+  --clinic-icon-outline: #26282C;
+  --clinic-icon-active: #477BEB; 
+  --clinic-icon-disabled: #A9AAAB; 
+
+  --clinic-status-error: #D00000;
+  --clinic-status-warning: #F48C06;
+  --clinic-status-success: #37BC2F;
+
+
+  --clinic-font-header: "Helvetica Neue", sans-serif;
+  --clinic-font-body: "Helvetica Neue", sans-serif;
+  --clinic-font-mono: "Fira Mono", monospace;
+
+  --clinic-outline: 2px dotted #D00000;
+
+
+
+  --prism-body-background: var(--clinic-background-base);
+  /* --prism-body-background: #ff0000; */
+
+  --prism-card-radius: 8px;
+  --prism-card-line: 1px solid var(--clinic-line-default);
+  --prism-card-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.04);
+  --prism-card-background: var(--clinic-background-higher);
+
+}

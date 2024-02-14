@@ -1,0 +1,53 @@
+// body {
+//   --color-brand: hsl(220, 80%, 29%); // #0F3689
+//   --color-hover: hsl(221, 80%, 23%); // #0C2B6E;
+//   --color-disabled: hsl(224, 9%, 83%); // #D2D4DA;
+//   --color-error: hsl(0, 100%, 40%); // #D00000;
+//   --color-warning: hsl(33, 95%, 49%); // #F48C06;
+//   --color-success: hsl(116, 60%, 46%); // #37BC2F;
+
+//   --outline: 2px dotted hsl(0, 100%, 40%); // 2px dotted #D00000;
+
+//   --text-primary: hsl(216, 8%, 11%); // #1C1E21;
+//   --text-secondary: hsl(216, 4%, 23%); // #393B3E;
+//   --text-gray: hsl(220, 1%, 47%); // #77787A;
+//   --text-disabled: hsl(210, 1%, 66%); // #A9AAAB;
+//   --text-inverse: hsl(0, 0%, 100%); // #FFFFFF;
+
+//   --background-higher: hsl(210, 0%, 100%); // #FFFFFF;
+//   --background-default: hsl(210, 16%, 97%); // #F8F9FA;
+//   --background-hover: hsl(180, 20%, 99%); // #FCFDFD;
+
+//   --icon-outline: hsl(220, 7%, 16%);  // #26282C;
+//   --icon-active: hsl(220, 80%, 60%); // #477BEB; 
+//   --icon-disabled: hsl(210, 1%, 66%); // #A9AAAB; 
+
+//   --line-default: hsl(240, 6%, 94%); // #EFEFF1;
+//   --line-section: hsl(210, 10%, 88%); // #DFE2E5;
+//   --line-header: hsl(212, 11%, 77%); // #BFC5CC;
+
+//   &.dark-mode {
+//     --color-brand: #3390FF;
+//     --color-hover: #55A2FF;
+//     --color-disabled: #73787F;
+//     --color-error: #E20000;
+//     --color-warning: #FF7701;
+//     --color-success: #79C346;
+//     --outline: 2px dotted #E20000;
+    
+//     --text-primary: #FFFFFF;
+//     --text-secondary: #E2E3E4;
+//     --text-gray: #A5A8AC;
+//     --text-disabled: #73787F;
+//     --text-inverse: hsl(0, 0%, 100%);
+    
+//     --background-default: #1F2937;
+//     --background-hover: #222A38;
+//     --icon-outline: #3390FF;
+//     --icon-active: #FFFFFF;
+//     --icon-disabled: #73787F;
+//     --line-default: #A5A8AC;
+//     --line-section: #E2E3E4;
+//     --line-header: #FFFFFF;
+//   }
+// }

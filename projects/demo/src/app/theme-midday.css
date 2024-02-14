@@ -1,0 +1,38 @@
+body.theme-midday {
+  --font-header: "Signika", sans-serif;
+  --font-body: "Signika", sans-serif;
+  --font-mono: "Fira Mono", monospace;
+
+  
+
+
+
+  --color-brand: hsl(220, 80%, 29%); // #0F3689
+  --color-hover: hsl(221, 80%, 23%); // #0C2B6E;
+  --color-disabled: hsl(224, 9%, 83%); // #D2D4DA;
+  --color-error: hsl(0, 100%, 40%); // #D00000;
+  --color-warning: hsl(33, 95%, 49%); // #F48C06;
+  --color-success: hsl(116, 60%, 46%); // #37BC2F;
+
+  --outline: 2px dotted hsl(0, 100%, 40%); // 2px dotted #D00000;
+
+  --text-primary: hsl(216, 8%, 11%); // #1C1E21;
+  --text-secondary: hsl(216, 4%, 23%); // #393B3E;
+  --text-gray: hsl(220, 1%, 47%); // #77787A;
+  --text-disabled: hsl(210, 1%, 66%); // #A9AAAB;
+  --text-inverse: hsl(0, 0%, 100%); // #FFFFFF;
+
+  --background-higher: hsl(210, 0%, 100%); // #FFFFFF;
+  --background-default: hsl(210, 16%, 97%); // #F8F9FA;
+  --background-hover: hsl(180, 20%, 99%); // #FCFDFD;
+
+  --icon-outline: hsl(220, 7%, 16%);  // #26282C;
+  --icon-active: hsl(220, 80%, 60%); // #477BEB; 
+  --icon-disabled: hsl(210, 1%, 66%); // #A9AAAB; 
+
+  --line-default: hsl(240, 6%, 94%); // #EFEFF1;
+  --line-section: hsl(210, 10%, 88%); // #DFE2E5;
+  --line-header: hsl(212, 11%, 77%); // #BFC5CC;
+
+}
+

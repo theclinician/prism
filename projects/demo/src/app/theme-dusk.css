@@ -1,0 +1,92 @@
+body {
+
+  --dusk-color-black: #080808;
+  --dusk-color-mist: #012;
+  --dusk-color-indigo: #023;
+  --dusk-color-azure: #157;
+  --dusk-color-cerulean: #168;
+  --dusk-color-ice: #49A;
+
+  --dusk-color-amber: #b61;
+  --dusk-color-yellow: #ca1;
+  --dusk-color-offwhite: #9CD;
+  --dusk-color-white: #eee;
+
+  --dusk-font-header: "Signika", sans-serif;
+  --dusk-font-body: "Signika", sans-serif;
+  --dusk-font-mono: "Fira Mono", monospace;
+
+  
+
+
+  /* ===== UTILS ========================= */
+
+  /* --prism-background-lowest: var(--dusk-color-black);
+  --prism-background-lower: var(--dusk-color-mist);
+  --prism-background-low: var(--dusk-color-indigo);
+  --prism-background-middle: var(--dusk-color-indigo);
+  --prism-background-high: var(--dusk-color-indigo);
+  --prism-background-higher: var(--dusk-color-indigo);
+  --prism-background-highest: var(--dusk-color-indigo);
+
+  --prism-line-high: var(--dusk-color-azure);
+
+  --prism-foreground-low: var(--dusk-color-ice);
+  --prism-foreground-middle: var(--dusk-color-ice);
+  --prism-foreground-high: var(--dusk-color-white); */
+
+
+
+  /* ===== BODY ========================= */
+
+  --prism-body-background: var(--dusk-color-black);
+  --prism-body-color: var(--dusk-color-offwhite);
+
+  --prism-font-header: var(--dusk-font-header);
+  --prism-font-body: var(--dusk-font-body);
+  --prism-font-mono: var(--dusk-font-mono);
+
+  /* ===== COMPOSITION ========================= */
+
+  /* ===== STATIC ========================= */
+
+  /* ===== ACTIONS ========================= */
+
+  /* ===== INPUT ========================= */
+
+  /* ===== PARTS ========================= */
+
+
+  /* --- Feed --- */
+
+  --prism-feed-color: var(--dusk-color-azure);
+  --prism-feed-padding: 24px;
+
+  /* --- Card --- */
+
+  --prism-card-radius: 8px;
+  --prism-card-line-color: var(--dusk-color-azure);
+  --prism-card-line: 1px solid var(--prism-card-line-color);
+  --prism-card-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.04);
+  --prism-card-background: var(--dusk-color-indigo);
+
+  /* --- Menu --- */
+
+  --prism-menu-background: var(--dusk-color-black);
+  --prism-menu-group-background: var(--dusk-color-indigo);
+  --prism-menu-group-border: var(--dusk-color-azure);
+  --prism-menu-item-border: var(--dusk-color-cerulean);
+  --prism-menu-title-color: var(--dusk-color-ice);
+  --prism-menu-item-color: var(--dusk-color-ice);
+
+
+  /* --- Demo --- */
+
+  --prism-demo-background: var(--dusk-color-black);
+  --prism-demo-code-background: var(--dusk-color-mist);
+  --prism-demo-display-background: var(--dusk-color-black);
+  --prism-demo-border-color: var(--dusk-color-azure);
+
+
+}
+
