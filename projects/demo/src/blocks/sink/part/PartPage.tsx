@@ -10,25 +10,26 @@ import {
   Padded,
   HStack,
   VStack,
-  MStack,
+  Demo,
   Feed,
   FeedCard,
   FeedHeader,
   Menu,
-  Demo,
   MenuGroup,
   MenuItem,
   MenuLook,
 } from "@zedoc/prism";
 import { Example } from "$/blocks/example";
+import { useAnchors } from "$/blocks/anchors";
 
 
-export const Template = () => {
+export const PartPage = () => {
+  const [anchors] = useAnchors();
   
   return (
     <Feed>
       
-      <FeedHeader>
+      <FeedHeader ref={anchors["feed"]}>
         Feed
       </FeedHeader>
 
@@ -61,7 +62,9 @@ export const Template = () => {
       </Example>
     
 
-      
+      <FeedHeader ref={anchors["menu"]}>
+        Menu
+      </FeedHeader>
 
       <Example
         code={`<Menu look={MenuLook.CAPSULE}/>`}
@@ -88,12 +91,6 @@ export const Template = () => {
           </MenuGroup>
         </Menu>
       </Example>
-
-
-      <FeedHeader>
-        Menu
-      </FeedHeader>
-
       
       <Example
         code={`<Menu look={MenuLook.GHOST}/>`}
@@ -125,6 +122,14 @@ export const Template = () => {
         </Menu>
       </Example>
       
+      <FeedHeader ref={anchors["modal"]}>
+        Modal
+      </FeedHeader>
+
+      <FeedHeader ref={anchors["demo"]}>
+        Demo
+      </FeedHeader>
+
       <Example
         code={`
           <Padded>
@@ -145,4 +150,4 @@ export const Template = () => {
   );
 }
 
-export default Template;
+export default PartPage;

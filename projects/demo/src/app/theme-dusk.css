@@ -52,6 +52,13 @@ body {
 
   /* ===== ACTIONS ========================= */
 
+  --prism-button-background: var(--dusk-color-ice);
+  --prism-button-accent: var(--dusk-color-cerulean);
+  --prism-button-text: var(--dusk-color-offwhite);
+  --prism-button-outline: var(--dusk-color-ice);
+  --prism-button-hover-background: var(--dusk-color-cerulean);
+  --prism-button-hover-text: var(--dusk-color-white);
+
   /* ===== INPUT ========================= */
 
   /* ===== PARTS ========================= */

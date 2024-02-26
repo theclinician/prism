@@ -16,7 +16,7 @@ const TBD = (allProps: {
         [style.tbd]: true,
       }}
       style={{
-        "background-image": src,
+        "background-image": `url(${src})`,
       }}
       {...other}
     />

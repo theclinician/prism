@@ -11,43 +11,156 @@ import {
   VStack,
   MStack,
   TBD,
-  Card,
-  Modal,
+  FeedCard,
+  Feed,
+  PaddingSize,
+  FeedHeader,
+  Separator,
 } from "@zedoc/prism";
+import { Example } from "$/blocks/example";
+import { useAnchors } from "$/blocks/anchors";
 
 
 export const Composition = () => {
+  const [anchors] = useAnchors();
   
   return (
-    <VStack>
-      <Card>
+    <Feed>
+      <FeedHeader ref={anchors["stack"]}>
+        Stack
+      </FeedHeader>
+
+      <Example code={`
+        <HStack>
+          ...
+        </HStack>
+      `}>
+        <HStack>
+          <Button>A</Button>
+          <Button>B</Button>
+          <Button>C</Button>
+        </HStack>
+      </Example>
+
+      <Example code={`
+        <HStack
+          gap={PaddingSize.MEDIUM}
+        >
+          ...
+        </HStack>
+      `}>
+        <HStack gap={PaddingSize.MEDIUM}>
+          <Button>A</Button>
+          <Button>B</Button>
+          <Button>C</Button>
+        </HStack>
+      </Example>
+
+      <Example code={`
+        <HStack flip>
+          ...
+        </HStack>
+      `}>
+        <HStack flip>
+          <Button>A</Button>
+          <Button>B</Button>
+          <Button>C</Button>
+        </HStack>
+      </Example>
+
+      <Example code={`
+        <VStack>
+          ...
+        </VStack>
+      `}>
+        <VStack>
+          <Button>A</Button>
+          <Button>B</Button>
+          <Button>C</Button>
+        </VStack>
+      </Example>
+
+
+      <FeedHeader ref={anchors["separator"]}>
+        Separator
+      </FeedHeader>
+
+      <Example code={`
+        <HStack>
+          <Button>A</Button>
+          <Button>B</Button>
+          <Separator/>
+          <Button>C</Button>
+        </HStack>
+      `}>
+        <HStack>
+          <Button>A</Button>
+          <Button>B</Button>
+          <Separator/>
+          <Button>C</Button>
+        </HStack>
+      </Example>
+
+
+      <FeedHeader ref={anchors["padded"]}>
+        Padded
+      </FeedHeader>
+
+      <Example code={`
         <Padded>
-          HStack
+          ...
         </Padded>
-      </Card>
-      <Card>
+      `}>
         <Padded>
-          VStack
+          <Button>A</Button>
+          <Button>B</Button>
+          <Button>C</Button>
         </Padded>
-      </Card>
-      
-      <Card>
-        <Padded>
-          Separator
+      </Example>
+
+      <Example code={`
+        <Padded padding={PaddingSize.SMALLEST}>
+          ...
         </Padded>
-      </Card>
-      <Card>
-        <Padded>
-          Row
+      `}>
+        <Padded padding={PaddingSize.SMALLEST}>
+          <Button>A</Button>
+          <Button>B</Button>
+          <Button>C</Button>
         </Padded>
-      </Card>
-      <Card>
-        <Padded>
-          Column
+      </Example>
+
+      <Example code={`
+        <Padded padding={PaddingSize.LARGEST}>
+          ...
         </Padded>
-      </Card>
-      
-    </VStack>
+      `}>
+        <Padded padding={PaddingSize.LARGEST}>
+          <Button>A</Button>
+          <Button>B</Button>
+          <Button>C</Button>
+        </Padded>
+      </Example>
+
+
+      <FeedHeader ref={anchors["props"]}>
+        Composition props
+      </FeedHeader>
+
+      <Example code={`
+        tall?: boolean,
+        wide?: boolean,
+        padding?: PaddingSize | null,
+        horizontal?: PaddingSize | null,
+        vertical?: PaddingSize | null,
+        top?: PaddingSize | null,
+        bottom?: PaddingSize | null,
+        left?: PaddingSize | null,
+        right?: PaddingSize | null,
+        gap?: PaddingSize | null,
+      `}/>
+
+    </Feed>
   );
 }
 

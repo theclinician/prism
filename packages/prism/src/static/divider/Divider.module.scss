@@ -8,12 +8,12 @@
   align-items: center;
   justify-content: space-between;
   
-  color: var(--text-gray);
+  color: var(--prism-divider-color);
 }
 
 .line {
   width: 1px;
   height: 1px;
   flex: 1 1 auto;
-  background-color: var(--text-gray);
+  background-color: var(--prism-divider-color);
 }

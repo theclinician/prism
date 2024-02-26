@@ -2,10 +2,14 @@
 @import "$/body/preamble.scss";
 
 .button {
-  @include font-body-medium;
+  // @include font-body-medium;
   padding: 0px;
   background: none;
   border: none;
+  display: inline-block;
+}
+
+.wide {
   width: 100%;
 }
 
@@ -13,47 +17,26 @@
   width: auto;
 }
 
-.primary {
-  --button-main: var(--color-brand);
-  --button-hover: var(--color-hover);
-  --button-on-main: var(--text-inverse);
-  --button-transparent: color.change(var(--color-brand), $alpha: 0);
 
-  &:disabled {
-    --button-main: var(--color-disabled);
-    --button-hover: var(--color-disabled);
-    --button-transparent: color.change(var(--color-disabled), $alpha: 0);
-  }
+.primary {
+  // --button-main: var(--color-brand);
+  // --button-hover: var(--color-hover);
+  // --button-on-main: var(--text-inverse);
+  // --button-transparent: color.change(var(--color-brand), $alpha: 0);
+
+  // &:disabled {
+  //   --button-main: var(--color-disabled);
+  //   --button-hover: var(--color-disabled);
+  //   --button-transparent: color.change(var(--color-disabled), $alpha: 0);
+  // }
   // background: var(--button-main);
   // color: var(--button-on-main);
   // border: 0px solid var(--button-main);
 }
 
-.secondary {
-
-}
-
-.neutral {
-
-}
-
-.error {
-
-}
-
-.warning {
-
-}
-
-.success {
-
-}
-
-.info {
-
-}
-
 .inner {
+  @include animated;
+
   width: 100%;
   height: 100%;
   padding: 0px 16px;
@@ -80,38 +63,77 @@
 
 
 .fill {
-  @include animated;
-  background: var(--button-main);
-  color: var(--button-on-main);
-  border: 0px solid var(--button-main);
+  background: linear-gradient(to bottom, var(--prism-button-background), var(--prism-button-accent));
+  box-shadow: 0px 0px 8px var(--prism-button-accent) inset;
+  color: var(--prism-button-text);
+  border: 0px solid rgba(0,0,0,0);
 
   .button:hover & {
-    background: var(--button-hover);
+    background: linear-gradient(to bottom, var(--prism-button-hover-background), var(--prism-button-accent));
+    box-shadow: 0px 0px 8px var(--prism-button-hover-background) inset;
+    color: var(--prism-button-hover-text);
+  }
+}
+
+.flat {
+  background: var(--prism-button-background);
+  color: var(--prism-button-text);
+  border: 0px solid rgba(0,0,0,0);
+
+  .button:hover & {
+    background: var(--prism-button-hover-background);
+    color: var(--prism-button-hover-text);
   }
 }
 
 .ghost {
-  @include animated;
-  background: var(--button-transparent);
-  color: var(--button-main);
-  border: 0px solid var(--button-transparent);
+  background: rgba($color: var(--prism-button-hover-background), $alpha: 0);
+  color: var(--prism-button-background);
+  border: 0px solid rgba(0,0,0,0);
 
   .button:hover & {
-    color: var(--button-hover)
+    color: var(--prism-button-hover-background)
   }
 }
 
 .outline {
   @include animated;
-  background: var(--button-transparent);
-  color: var(--button-main);
-  border: 1px solid var(--button-main);
+  background: rgba(0, 0, 0, 0);
+  color: var(--prism-button-text);
+  border: 1px solid var(--prism-button-outline);
 
   .button:hover & {
-    color: var(--button-hover);
-    border: 1px solid var(--button-hover);
+    background: rgba(0, 0, 0, 0);
+    color: var(--prism-button-hover-text);
+    border: 1px solid var(--prism-button-hover-background);
   }
 }
 
 
 
+
+
+
+// .secondary {
+
+// }
+
+// .neutral {
+
+// }
+
+// .error {
+
+// }
+
+// .warning {
+
+// }
+
+// .success {
+
+// }
+
+// .info {
+
+// }

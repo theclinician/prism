@@ -2,6 +2,7 @@ import { Demo } from "@zedoc/prism";
 import { JSX,  createMemo,  children as useChildren } from "solid-js";
 import style from "./Example.module.scss";
 import { Token, TokenType, parseCode, trimCode } from "./utils";
+import { Padded } from "@zedoc/prism";
 
 
 
@@ -39,7 +40,9 @@ export const Example = (props: {
         ))
       }
     >
-      {c()}
+      <Padded>
+        {c()}
+      </Padded>
     </Demo>
   );
 }

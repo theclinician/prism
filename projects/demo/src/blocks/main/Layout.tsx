@@ -17,7 +17,7 @@ import {
   Mobile,
 } from "@zedoc/prism";
 
-import Menu from "./Menu"
+import AppMenu from "./AppMenu"
 
 export type Props = {
   children?: JSX.Element;
@@ -30,7 +30,7 @@ export const Layout = (props: Props) => {
     <HStack tall>
       <HStack tall style={{"max-width": "1536px"}}>
         <Scroll style={{"max-width": "240px"}}>
-          <Menu/>
+          <AppMenu/>
           <Separator/>
         </Scroll>
         <Separator/>

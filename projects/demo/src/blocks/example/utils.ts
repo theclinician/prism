@@ -36,7 +36,7 @@ export const parseCode = (html: string): Token[] => {
   
   
   const tokens = html.match(tokenRegex) ?? [];
-  console.log("TOKENS", tokens);
+  // console.log("TOKENS", tokens);
   const result: Token[] = [];
   
   tokens.forEach(token => {

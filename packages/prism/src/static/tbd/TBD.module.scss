@@ -2,7 +2,7 @@
   width: 40px;
   height: 40px;
   line-height: 40px;
-  border-radius: 15px;
+  border-radius: 3px;
 
   padding: 4px;
   display: flex;
@@ -10,10 +10,11 @@
   justify-content: center;
 
   text-align: center;
-  background: #333;
+  background-color: #333;
   color: #ccc;
   font-weight: 700;
   font-size: 10px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75) inset;
 
   background-size: cover;
   background-position: center;

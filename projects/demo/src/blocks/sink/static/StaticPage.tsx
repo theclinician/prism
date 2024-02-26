@@ -1,6 +1,6 @@
 import {
-  Button,
-  ButtonLook,
+  Feed,
+  FeedHeader,
   Color,
   Heading3,
   Tabs,
@@ -9,34 +9,100 @@ import {
   Padded,
   HStack,
   Icon,
-  MStack,
+  I,
   TBD,
-  Card,
+  Separator,
   Spinner,
-  Scroll,
+  FeedCard,
   Divider,
+  Label,
 } from "@zedoc/prism";
 
-import { Code, Demo, Example } from "$/blocks/example";
+import { Example } from "$/blocks/example";
+import { useAnchors } from "$/blocks/anchors";
 
 
 export const StaticPage = () => {
+  const [anchors] = useAnchors();
   
   return (
-    <Scroll>
-      <Example title="Divider">
-        <Divider/>
+    <Feed>
+      <FeedHeader ref={anchors["label"]}>
+        Label
+      </FeedHeader>
+
+      <Example code={`
+      `}>
+        <FeedCard>
+          <HStack>
+
+            <Label>
+              Hey it's a label!
+            </Label>
+            <Separator/>
+          </HStack>
+        </FeedCard>
       </Example>
-      <Example>
-        <Icon/>
-      </Example>
-      <Example>
+      
+      <FeedHeader ref={anchors["spinner"]}>
+        Spinner
+      </FeedHeader>
+
+      <Example code={`
+        <Spinner/>
+      `}>
         <Spinner/>
       </Example>
-      <Example>
+      
+      <FeedHeader ref={anchors["divider"]}>
+        Divider
+      </FeedHeader>
+      
+      <Example code={`
+        <Divider/>
+      `}>
+        <Divider/>
+      </Example>
+      
+      <Example code={`
+        <Divider>
+          OR
+        </Divider>
+      `}>
+        <Divider>
+          OR
+        </Divider>
+      </Example>
+
+      <FeedHeader ref={anchors["icons"]}>
+        Icons
+      </FeedHeader>
+
+      <Example code={`
+        <Icon icon={I.user}/>
+      `}>
+        <Icon icon={I.user}/>
+      </Example>
+      
+      <FeedHeader ref={anchors["tbd"]}>
+        TBD
+      </FeedHeader>
+
+      <Example code={`
+        <TBD/>
+      `}>
         <TBD/>
       </Example>
-    </Scroll>
+      
+      <FeedHeader ref={anchors["typography"]}>
+        Typography
+      </FeedHeader>
+
+
+      
+      
+      
+    </Feed>
   );
 }
 

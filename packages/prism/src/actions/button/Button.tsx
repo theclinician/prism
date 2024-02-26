@@ -7,6 +7,7 @@ import { Dynamic } from "solid-js/web";
 
 export enum ButtonLook {
   FILL = "FILL",
+  FLAT = "FLAT",
   GHOST = "GHOST",
   OUTLINE = "OUTLINE",
 }
@@ -25,6 +26,8 @@ type Props = {
   inline?: boolean,
   innerStyle?: JSX.CSSProperties,
   href?: undefined | null | string,
+  wide?: boolean,
+  disabled?: boolean,
 }
 
 const defaultProps: Required<Props> = {
@@ -35,6 +38,8 @@ const defaultProps: Required<Props> = {
   inline: false,
   innerStyle: {},
   href: null,
+  wide: false,
+  disabled: false,
 }
 
 
@@ -49,13 +54,14 @@ const Button = (allProps: Props & JSX.IntrinsicElements['button']) => {
       classList={{
         [style.button]: true,
         [style.inline]: props.inline,
-        [style.primary]: props.color === Color.PRIMARY,
-        [style.secondary]: props.color === Color.SECONDARY,
-        [style.neutral]: props.color === Color.NEUTRAL,
-        [style.error]: props.color === Color.ERROR,
-        [style.warning]: props.color === Color.WARNING,
-        [style.success]: props.color === Color.SUCCESS,
-        [style.info]: props.color === Color.INFO,
+        [style.wide]: props.wide,
+        [style.primary]: true,
+        // [style.secondary]: props.color === Color.SECONDARY,
+        // [style.neutral]: props.color === Color.NEUTRAL,
+        // [style.error]: props.color === Color.ERROR,
+        // [style.warning]: props.color === Color.WARNING,
+        // [style.success]: props.color === Color.SUCCESS,
+        // [style.info]: props.color === Color.INFO,
       }}
       {...other}
     >
@@ -64,6 +70,7 @@ const Button = (allProps: Props & JSX.IntrinsicElements['button']) => {
           [style.inner]: true,
 
           [style.fill]: props.look === ButtonLook.FILL,
+          [style.flat]: props.look === ButtonLook.FLAT,
           [style.ghost]: props.look === ButtonLook.GHOST,
           [style.outline]: props.look === ButtonLook.OUTLINE,
 

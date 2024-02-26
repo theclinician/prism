@@ -1,5 +1,5 @@
 import { JSX, children as useChildren } from "solid-js";
-import style from "./Divider.module.scss";
+import style from "./Label.module.scss";
 import useProps from "$/utils/useProps";
 
 
@@ -11,29 +11,20 @@ const defaultProps: Required<Props> = {
   children: null,
 }
 
-const Divider = (allProps: Props & JSX.IntrinsicElements['div']) => {
+const Label = (allProps: Props & JSX.IntrinsicElements['div']) => {
   const [props, other] = useProps(allProps, defaultProps);
   const c = useChildren(() => props.children);
 
   return (
     <div
       classList={{
-        [style.divider]: true,
+        [style.label]: true,
       }}
       {...other}
     >
-      {c() === null ? (
-        <div class={style.line}/>
-      ) : (
-        <>
-          <div class={style.line}/>
-            {c()}
-          <div class={style.line}/>
-        </>
-      )}
-      
+      {c()} 
     </div>
   );
 }
 
-export default Divider;
+export default Label;

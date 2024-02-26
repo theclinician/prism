@@ -3,7 +3,7 @@ import { render } from "solid-js/web"
 import { Router } from "@solidjs/router";
 import { Button, PrismWrap } from "@zedoc/prism";
 
-import "./theme-dusk.css";
+import "./theme-clinic.css";
 
 import "@fontsource/fira-mono";
 import "@fontsource-variable/signika";

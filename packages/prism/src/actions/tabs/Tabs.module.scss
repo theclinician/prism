@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
 
-  @include font-body-regular;
+  // @include font-body-regular;
   color: var(--text-gray);
   box-shadow: 0px -1px 0px 0px var(--line-default) inset;
   cursor: pointer;
@@ -29,7 +29,7 @@
 }
 
 .active {
-  @include font-body-medium;
+  // @include font-body-medium;
   color: var(--color-brand);
   box-shadow: 0px -2px 0px 0px var(--color-brand) inset;
 }

@@ -41,6 +41,12 @@ export const Heading3 = (allProps: {
   );
 }
 
+export const SubHeading = () => {}
+
+
+export const MetaText = () => {}
+
+
 export const Paragraph = (allProps: {
   children: JSX.Element,
 }) => {

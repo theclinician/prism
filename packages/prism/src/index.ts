@@ -14,11 +14,12 @@ export { default as PrismWrap } from "$/body/PrismWrap";
 
 /* Composition ============================================================ */
 
-export { default as Padded, PaddingSize } from "$/composition/Padded";
+export { PaddingSize, type CompositionProps, useCompositionProps, compositionClassList } from "$/composition/Composition";
+// export { default as Padded } from "$/composition/Padded";
 export { default as RightFloat } from "$/composition/RightFloat";
 export { default as Separator } from "$/composition/Separator";
 export { default as Scroll } from "$/composition/Scroll";
-export { HStack, MStack, VStack, ZStack } from "$/composition/Stack";
+export { HStack, VStack, Padded } from "$/composition/Stack";
 
 
 
@@ -33,6 +34,7 @@ export {
   Paragraph,
   SecondaryText,
 } from "$/static/typography/Typography";
+export { default as Label } from "$/static/label/Label";
 export { default as TBD } from "$/static/tbd/TBD";
 export { default as Divider } from "$/static/divider/Divider";
 export { default as Icon, I, IconSize } from "$/static/icon/Icon";

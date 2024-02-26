@@ -7,54 +7,25 @@ export const routes = [{
   
     {
       path: "/", component: lazy(() => import("$/blocks/main/Home")),
-    },
-    
-    {
+    }, {
+      path: "/body", component: lazy(() => import("$/blocks/sink/body/BodyPage")),
+    }, {
       path: "/layout", component: lazy(() => import("$/blocks/sink/composition/LayoutPage")),
-    },
-    
-    
-    {
+    }, {
       path: "/composition", component: lazy(() => import("$/blocks/sink/composition/CompositionPage")),
-    },
-    
-    {
+    }, {
       path: "/static", component: lazy(() => import("$/blocks/sink/static/StaticPage")),
     }, {
-      path: "/icons", component: lazy(() => import("$/blocks/sink/static/Icons")),
-    },
-
-    {
-      path: "/actions", component: lazy(() => import("$/blocks/sink/actions/Actions")),
+      path: "/action", component: lazy(() => import("$/blocks/sink/action/ActionPage")),
     }, {
-      path: "/buttons", component: lazy(() => import("$/blocks/sink/actions/Buttons")),
-    },
-    
-    
-    {
-      path: "/parts", component: lazy(() => import("$/blocks/sink/parts/PartsPage")),
+      path: "/control", component: lazy(() => import("$/blocks/sink/control/ControlPage")),
     }, {
-      path: "/feed", component: lazy(() => import("$/blocks/sink/parts/FeedPage")),
+      path: "/display", component: lazy(() => import("$/blocks/sink/display/DisplayPage")),
     }, {
-      path: "/menu", component: lazy(() => import("$/blocks/sink/parts/MenuPage")),
-    },
-    
-
-    {
-      path: "/fonts", component: lazy(() => import("$/blocks/sink/themes/ThemeFonts")),
+      path: "/part", component: lazy(() => import("$/blocks/sink/part/PartPage")),
     }, {
-      path: "/colors", component: lazy(() => import("$/blocks/sink/themes/ThemeColors")),
+      path: "/theme", component: lazy(() => import("$/blocks/sink/theme/ThemePage")),
     }, {
-      path: "/typography", component: lazy(() => import("$/blocks/sink/static/Typography")),
-    }, {
-      path: "/inputs", component: lazy(() => import("$/blocks/sink/inputs/Inputs")),
-    }, {
-    
-    }, {
-      path: "/palette", component: lazy(() => import("$/blocks/themes/Palette")),
-    },
-    
-    {
       path: "*", component: lazy(() => import("$/blocks/main/NotFound")),
     }
   ],

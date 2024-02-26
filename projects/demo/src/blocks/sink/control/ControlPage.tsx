@@ -16,15 +16,15 @@ import {
 } from "@zedoc/prism";
 
 
-export const Template = () => {
+export const ControlPage = () => {
   
   return (
     <Card>
       <Padded>
-        Template
+        Inputs
       </Padded>
     </Card>
   );
 }
 
-export default Template;
+export default ControlPage;

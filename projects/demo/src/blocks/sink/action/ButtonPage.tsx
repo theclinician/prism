@@ -16,7 +16,7 @@ import {
 } from "@zedoc/prism";
 import { Example } from "$/blocks/example";
 
-export const SinkButtons = () => {
+export const ButtonPage = () => {
   const handleClick = async () => {
     // showDropdown(true);
   }
@@ -90,4 +90,4 @@ export const SinkButtons = () => {
   );
 }
 
-export default SinkButtons;
+export default ButtonPage;

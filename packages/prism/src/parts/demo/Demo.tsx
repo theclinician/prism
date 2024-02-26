@@ -1,6 +1,7 @@
 
 import { JSX,  children as useChildren } from "solid-js";
 import style from "./Demo.module.scss";
+import useProps from "../../utils/useProps";
 
 
 export type DemoProps = {
@@ -9,8 +10,16 @@ export type DemoProps = {
   children?: JSX.Element,
 };
 
+const defaultProps: Required<MenuProps> = {
+  title: "",
+  code: "",
+  children: null,
+}
 
-export const Demo = (props: DemoProps) => {
+
+
+export const Demo = (allProps: DemoProps) => {
+  const [props, other] = useProps(allProps, defaultProps);
   const c = useChildren(() => {
     return props.children;
   });

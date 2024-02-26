@@ -12,7 +12,7 @@
 
 .title {
   padding: 12px 0px 8px;
-  @include font-small-medium;
+  // @include font-small-medium;
   color: var(--dusk-color-ice);
 }
 
@@ -45,7 +45,7 @@
 .item {
   width: 100%;
   position: relative;
-  @include font-body-regular;
+  // @include font-body-regular;
   text-align: start;
   color: var(--prism-menu-item-color);
   padding: 16px;
