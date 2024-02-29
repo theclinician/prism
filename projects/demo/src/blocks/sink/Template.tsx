@@ -13,7 +13,7 @@ import {
   TBD,
   Card,
   Modal,
-} from "@zedoc/prism";
+} from "@theclinician/prism";
 import { Code, Demo, Example } from "$/blocks/example";
 
 

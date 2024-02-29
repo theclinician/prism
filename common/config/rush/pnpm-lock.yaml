@@ -41,7 +41,7 @@ importers:
       '@solidjs/router':
         specifier: 0.12.4
         version: 0.12.4(solid-js@1.8.15)
-      '@zedoc/prism':
+      '@theclinician/prism':
         specifier: workspace:*
         version: link:../../packages/prism
       solid-js:

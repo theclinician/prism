@@ -15,7 +15,7 @@ import {
   Menu,
   MenuItem,
   MenuGroup,
-} from "@zedoc/prism";
+} from "@theclinician/prism";
 
 
 export type Props = {

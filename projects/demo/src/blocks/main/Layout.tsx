@@ -15,7 +15,7 @@ import {
   Card,
   Modal,
   Mobile,
-} from "@zedoc/prism";
+} from "@theclinician/prism";
 
 import AppMenu from "./AppMenu"
 

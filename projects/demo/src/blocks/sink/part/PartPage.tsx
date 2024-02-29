@@ -18,7 +18,7 @@ import {
   MenuGroup,
   MenuItem,
   MenuLook,
-} from "@zedoc/prism";
+} from "@theclinician/prism";
 import { Example } from "$/blocks/example";
 import { useAnchors } from "$/blocks/anchors";
 

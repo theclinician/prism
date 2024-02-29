@@ -1,8 +1,8 @@
-import { Demo } from "@zedoc/prism";
+import { Demo } from "@theclinician/prism";
 import { JSX,  createMemo,  children as useChildren } from "solid-js";
 import style from "./Example.module.scss";
 import { Token, TokenType, parseCode, trimCode } from "./utils";
-import { Padded } from "@zedoc/prism";
+import { Padded } from "@theclinician/prism";
 
 
 

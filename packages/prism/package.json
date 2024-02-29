@@ -1,7 +1,7 @@
 {
-  "name": "@zedoc/prism",
+  "name": "@theclinician/prism",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Component library for Solid.js",
   "license": "MIT",
   "author": {
@@ -9,7 +9,6 @@
   },
   "repository": "github:theclinician/prism",
   "homepage": "https://github.com/theclinician/prism",
-
   "main": "dist/prism.umd.js",
   "module": "dist/prism.js",
   "types": "dist/index.d.ts",

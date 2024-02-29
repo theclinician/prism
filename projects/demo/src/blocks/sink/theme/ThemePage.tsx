@@ -18,7 +18,7 @@ import {
   Card,
   Feed,
   Modal,
-} from "@zedoc/prism";
+} from "@theclinician/prism";
 import style from "./ThemePage.module.scss";
 import { useAnchors } from "$/blocks/anchors";
 

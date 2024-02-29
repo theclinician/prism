@@ -2,7 +2,7 @@ import {
   HStack,
   VStack,
   Scroll,
-} from "@zedoc/prism";
+} from "@theclinician/prism";
 import Example from "$/blocks/example/Example";
 
 

@@ -17,7 +17,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.ts",
-      name: "@zedoc/prism",
+      name: "@theclinician/prism",
       fileName: "prism",
     },
     rollupOptions: {
