@@ -67,6 +67,8 @@ node_modules/
 common/deploy/
 common/temp/
 common/autoinstallers/*/.npmrc
+# common/config/rush/.npmrc
+# common/config/rush/.npmrc-publish
 **/.rush/temp/
 *.lock
 
