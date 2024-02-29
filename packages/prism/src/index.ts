@@ -3,7 +3,7 @@
 
 export { Color } from "$/utils/Color";
 export { createBooleanSignal } from "$/utils/createBooleanSignal";
-
+export { useProps } from "$/utils/useProps";
 
 
 /* Body ============================================================ */
@@ -33,6 +33,7 @@ export {
   Heading3,
   Paragraph,
   SecondaryText,
+  BrandText,
 } from "$/static/typography/Typography";
 export { default as Label } from "$/static/label/Label";
 export { default as TBD } from "$/static/tbd/TBD";

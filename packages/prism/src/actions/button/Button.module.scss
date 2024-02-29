@@ -56,56 +56,57 @@
 
 .large {
   height: 48px;
-  line-height: 48px;  
+  font: var(--prism-button-large-font);
+  line-height: 48px;
 }
 
 
 
 
 .fill {
-  background: linear-gradient(to bottom, var(--prism-button-background), var(--prism-button-accent));
-  box-shadow: 0px 0px 8px var(--prism-button-accent) inset;
-  color: var(--prism-button-text);
+  background: linear-gradient(to bottom, var(--prism-button-primary-background), var(--prism-button-primary-accent));
+  box-shadow: 0px 0px 8px var(--prism-button-primary-accent) inset;
+  color: var(--prism-button-primary-text);
   border: 0px solid rgba(0,0,0,0);
 
   .button:hover & {
-    background: linear-gradient(to bottom, var(--prism-button-hover-background), var(--prism-button-accent));
-    box-shadow: 0px 0px 8px var(--prism-button-hover-background) inset;
-    color: var(--prism-button-hover-text);
+    background: linear-gradient(to bottom, var(--prism-button-primary-hover-background), var(--prism-button-primary-accent));
+    box-shadow: 0px 0px 8px var(--prism-button-primary-hover-background) inset;
+    color: var(--prism-button-primary-hover-text);
   }
 }
 
 .flat {
-  background: var(--prism-button-background);
-  color: var(--prism-button-text);
+  background: var(--prism-button-primary-background);
+  color: var(--prism-button-primary-text);
   border: 0px solid rgba(0,0,0,0);
 
   .button:hover & {
-    background: var(--prism-button-hover-background);
-    color: var(--prism-button-hover-text);
+    background: var(--prism-button-primary-hover-background);
+    color: var(--prism-button-primary-hover-text);
   }
 }
 
 .ghost {
-  background: rgba($color: var(--prism-button-hover-background), $alpha: 0);
-  color: var(--prism-button-background);
+  background: rgba($color: var(--prism-button-primary-hover-background), $alpha: 0);
+  color: var(--prism-button-primary-background);
   border: 0px solid rgba(0,0,0,0);
 
   .button:hover & {
-    color: var(--prism-button-hover-background)
+    color: var(--prism-button-primary-hover-background)
   }
 }
 
 .outline {
   @include animated;
   background: rgba(0, 0, 0, 0);
-  color: var(--prism-button-text);
-  border: 1px solid var(--prism-button-outline);
+  color: var(--prism-button-primary-outline);
+  border: 1px solid var(--prism-button-primary-outline);
 
   .button:hover & {
     background: rgba(0, 0, 0, 0);
-    color: var(--prism-button-hover-text);
-    border: 1px solid var(--prism-button-hover-background);
+    color: var(--prism-button-primary-hover-outline);
+    border: 1px solid var(--prism-button-primary-hover-outline);
   }
 }
 

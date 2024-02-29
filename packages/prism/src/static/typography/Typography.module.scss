@@ -1,12 +1,22 @@
 @import "$/body/preamble.scss";
 
+.heading1 {
+  font: var(--prism-typography-heading1-font);
+}
+
 .heading2 {
-  // @include font-heading-2;
+  font: var(--prism-typography-heading2-font);
 }
 
 .heading3 {
-  // @include font-heading-3;
+  font: var(--prism-typography-heading3-font);
 }
+
+.heading4 {
+  font: var(--prism-typography-heading4-font);
+}
+
+
 
 .paragraph {
   // @include font-body-regular;
