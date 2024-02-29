@@ -318,7 +318,7 @@
    */
   "projects": [
     {
-      "packageName": "@zedoc/prism",
+      "packageName": "@theclinician/prism",
       "projectFolder": "packages/prism",
       "tags": ["package"],
       "shouldPublish": true
@@ -326,7 +326,7 @@
       // "tags": [ "tools" ]
     },
     {
-      "packageName": "@zedoc/prism-demo",
+      "packageName": "@theclinician/prism-demo",
       "projectFolder": "projects/demo"
       // "reviewCategory": "tools",
       // "tags": [ "tools" ]

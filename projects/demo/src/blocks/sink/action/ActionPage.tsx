@@ -16,7 +16,7 @@ import {
   Feed,
   FeedHeader,
   FeedCard,
-} from "@zedoc/prism";
+} from "@theclinician/prism";
 import { Example } from "$/blocks/example";
 
 export const ActionPage = () => {

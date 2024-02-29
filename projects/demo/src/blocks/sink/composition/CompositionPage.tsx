@@ -16,7 +16,7 @@ import {
   PaddingSize,
   FeedHeader,
   Separator,
-} from "@zedoc/prism";
+} from "@theclinician/prism";
 import { Example } from "$/blocks/example";
 import { useAnchors } from "$/blocks/anchors";
 

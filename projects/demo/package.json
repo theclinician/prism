@@ -1,5 +1,5 @@
 {
-  "name": "@zedoc/prism-demo",
+  "name": "@theclinician/prism-demo",
   "type": "module",
   "version": "0.0.0",
   "scripts": {
@@ -12,7 +12,7 @@
     "@fontsource/fira-mono": "5.0.8",
     "@fontsource-variable/signika": "5.0.18",
     "@solidjs/router": "0.12.4",
-    "@zedoc/prism": "workspace:*",
+    "@theclinician/prism": "workspace:*",
     "solid-js": "1.8.15"
   },
   "devDependencies": {
