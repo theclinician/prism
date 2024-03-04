@@ -3,7 +3,7 @@ import style from "./Typography.module.scss";
 
 export const Heading2 = (allProps: {
   children: JSX.Element,
-}) => {
+}): JSX.Element => {
   const [props, other] = splitProps(allProps, [
     "children",
   ]);

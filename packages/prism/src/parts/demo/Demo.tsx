@@ -10,7 +10,7 @@ export type DemoProps = {
   children?: JSX.Element,
 };
 
-const defaultProps: Required<MenuProps> = {
+const defaultProps: Required<DemoProps> = {
   title: "",
   code: "",
   children: null,
@@ -18,14 +18,17 @@ const defaultProps: Required<MenuProps> = {
 
 
 
-export const Demo = (allProps: DemoProps) => {
+export const Demo = (allProps: DemoProps & JSX.IntrinsicElements["div"]) => {
   const [props, other] = useProps(allProps, defaultProps);
   const c = useChildren(() => {
     return props.children;
   });
 
   return (
-    <div class={style.demo}>
+    <div
+      class={style.demo}
+      {...other}
+    >
       <div class={style.title}>
         {props.title}
       </div>

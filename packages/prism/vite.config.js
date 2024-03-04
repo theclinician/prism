@@ -13,20 +13,37 @@ export default defineConfig({
     alias: {
       "$": resolve(__dirname, "src"),
     },
+    conditions: ["development", "browser"],
   },
   build: {
+    minify: false,
+    conditions: ["development", "browser"],
+    ssr: false,
+    // outDir: resolve(__dirname, "./dist"),
     lib: {
-      entry: "src/index.ts",
+      entry:
+        "src/index.tsx",
+        // "src/solid.tsx",
+        // "src/web.tsx",
+      formats: ["esm"],
       name: "@theclinician/prism",
-      fileName: "prism",
+      fileName: "index",
     },
     rollupOptions: {
-      external: ["solid-js"],
+      external: [
+      //   "Solid",
+        "solid-js",
+        "solid-js/web",
+      //   "solid-js/dist/dev",
+      ],
       output: {
         globals: {
-          "solid-js": "Solid"
+          "solid-js": "Solid",
+          "solid-js/web": "Solid",
         }
-      }
+      },
+      jsx: "preserve",
+      moduleContext: "browser",
     }
   }
 });
