@@ -45,6 +45,7 @@ export const VStack = (allProps: Props & JSX.IntrinsicElements['div']) => {
       }}
       {...other}
     >
+      <div>((VSTACK))</div>
       {c()}
     </div>
   );

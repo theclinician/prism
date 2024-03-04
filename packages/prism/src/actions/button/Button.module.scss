@@ -1,5 +1,9 @@
 @use "sass:color";
-@import "$/body/preamble.scss";
+// @import "$/body/preamble.scss";
+@mixin animated {
+  transition: all 0.25s ease;
+}
+
 
 .button {
   // @include font-body-medium;

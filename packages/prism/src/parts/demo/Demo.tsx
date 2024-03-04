@@ -10,7 +10,7 @@ export type DemoProps = {
   children?: JSX.Element,
 };
 
-const defaultProps: Required<MenuProps> = {
+const defaultProps: Required<DemoProps> = {
   title: "",
   code: "",
   children: null,

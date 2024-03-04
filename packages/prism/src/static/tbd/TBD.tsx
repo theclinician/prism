@@ -1,6 +1,6 @@
 import { JSX, splitProps } from "solid-js";
 import style from "./TBD.module.scss";
-import src from "./tbd.png";
+// import src from "./tbd.png";
 
 
 const TBD = (allProps: {
@@ -16,7 +16,8 @@ const TBD = (allProps: {
         [style.tbd]: true,
       }}
       style={{
-        "background-image": `url(${src})`,
+        "background-color": "magenta",
+        // "background-image": `url(${src})`,
       }}
       {...other}
     />

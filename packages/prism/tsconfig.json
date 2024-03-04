@@ -1,21 +1,27 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "declarationDir": "./dist",
+    // "declarationDir": "./dist",
+    "emitDeclarationOnly": false,
+    // "esModuleInterop": true,
+    // "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "lib": ["esnext", "DOM"],
+    // "lib": ["esnext", "dom"],
     "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "strict": true,
-    "target": "esnext",
-    // "baseUrl": ".",
+    "newLine": "LF",
+    "outDir": "./dist",
     "paths": {
       "$/*": ["./src/*"],
     },
-    "allowSyntheticDefaultImports": true,
-    // "allowImportingTsExtensions": true,
+    // "resolveJsonModule": true,
+    // "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "esnext",
+    "types": ["solid-js"],
   },
   "include": [
     "src/**/*.ts",
@@ -27,3 +33,4 @@
     "src/**/*.module.scss"
   ],
 }
+

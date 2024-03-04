@@ -1,12 +1,18 @@
 import { JSX, splitProps, children as useChildren } from "solid-js";
 import style from "./Typography.module.scss";
+import useProps from "$/utils/useProps";
 
-export const Heading2 = (allProps: {
-  children: JSX.Element,
-}) => {
-  const [props, other] = splitProps(allProps, [
-    "children",
-  ]);
+type Props = {
+  children?: JSX.Element,
+}
+
+const defaultProps: Required<Props> = {
+  children: null,
+}
+
+
+export const Heading2 = (allProps: Props & JSX.IntrinsicElements['div']) => {
+  const [props, other] = useProps(allProps, defaultProps);
 
   const c = useChildren(() => props.children);
   return (
