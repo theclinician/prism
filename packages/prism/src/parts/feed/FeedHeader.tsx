@@ -1,6 +1,6 @@
 import { JSX, createEffect, children as useChildren } from "solid-js";
 import style from "./Feed.module.scss";
-import useProps from "$/utils/useProps";
+import useProps from "__/utils/useProps";
 
 
 export type FeedHeaderProps = {

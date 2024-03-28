@@ -12,7 +12,7 @@
     "target": "esnext",
     // "baseUrl": ".",
     "paths": {
-      "$/*": ["./src/*"],
+      "__/*": ["./src/*"],
     },
     "allowSyntheticDefaultImports": true,
     // "allowImportingTsExtensions": true,

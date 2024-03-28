@@ -1,6 +1,6 @@
 import { JSX, createMemo } from "solid-js";
 import style from "./CodeInput.module.scss";
-import useProps from "$/utils/useProps";
+import useProps from "__/utils/useProps";
 
 
 type Props = {

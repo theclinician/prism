@@ -1,6 +1,6 @@
 import { JSX } from "solid-js";
 import style from "./Spinner.module.scss";
-import useProps from "$/utils/useProps";
+import useProps from "__/utils/useProps";
 import image from "./spinner-light.png";
 
 

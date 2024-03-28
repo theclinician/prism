@@ -1,6 +1,6 @@
 import { JSX, children as useChildren } from "solid-js";
 import style from "./Card.module.scss";
-import useProps from "$/utils/useProps";
+import useProps from "__/utils/useProps";
 
 
 type Props = {

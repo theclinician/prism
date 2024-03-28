@@ -1,6 +1,6 @@
 import { JSX, mergeProps, splitProps, children as useChildren } from "solid-js";
 import style from "./Stack.module.scss";
-import useProps from "$/utils/useProps";
+import useProps from "__/utils/useProps";
 import { CompositionProps, PaddingSize, compositionClassList, useCompositionProps } from "./Composition";
 
 export type Props = {

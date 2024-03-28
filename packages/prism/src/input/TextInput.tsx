@@ -1,6 +1,6 @@
 import { JSX, batch, createEffect, createSignal } from "solid-js";
 import style from "./Input.module.scss";
-import useProps from "$/utils/useProps";
+import useProps from "__/utils/useProps";
 
 
 type Props = {
