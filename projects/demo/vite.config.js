@@ -29,10 +29,12 @@ export default defineConfig(({command, mode}) => ({
   },
   build: {
     outDir: resolve(__dirname, "./dist"),
-    rollupOptions: {
-      // Ensure that the output is a self-contained file
-      // and does not assume that assets are in the same folder as the HTML
-      // inlineDynamicImports: true,
+    output: {
+      rollupOptions: {
+        // Ensure that the output is a self-contained file
+        // and does not assume that assets are in the same folder as the HTML
+        inlineDynamicImports: true,
+      },
     },
   },
 }));

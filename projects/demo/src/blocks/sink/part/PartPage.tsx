@@ -7,9 +7,6 @@ import {
   Tabs,
   Tab,
   useTabs,
-  Padded,
-  HStack,
-  VStack,
   Demo,
   Feed,
   FeedCard,
@@ -132,18 +129,18 @@ export const PartPage = () => {
 
       <Example
         code={`
-          <Padded>
+          <padded-stack>
             <Demo code={"A B <div>c</div> D"}>
               A B <div>c</div> D
             </Demo>
-          </Padded>
+          </padded-stack>
         `}
       >
-        <Padded>
+        <padded-stack>
           <Demo code={"A B <div>c</div> D"}>
             A B <div>c</div> D
           </Demo>
-        </Padded>
+        </padded-stack>
       </Example>
 
     </Feed>

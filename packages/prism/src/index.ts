@@ -15,11 +15,11 @@ export { default as PrismWrap } from "$/body/PrismWrap";
 /* Composition ============================================================ */
 
 export { PaddingSize, type CompositionProps, useCompositionProps, compositionClassList } from "$/composition/Composition";
-// export { default as Padded } from "$/composition/Padded";
+// export { default as padded-stack } from "$/composition/padded-stack";
 export { default as RightFloat } from "$/composition/RightFloat";
 export { default as Separator } from "$/composition/Separator";
 export { default as Scroll } from "$/composition/Scroll";
-export { HStack, VStack, Padded } from "$/composition/Stack";
+import "$/composition/Stack";
 
 
 

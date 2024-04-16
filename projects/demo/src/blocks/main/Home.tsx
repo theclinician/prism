@@ -6,10 +6,6 @@ import {
   Tabs,
   Tab,
   useTabs,
-  Padded,
-  HStack,
-  VStack,
-  MStack,
   TBD,
   Card,
   Modal,
@@ -20,9 +16,9 @@ export const Home = () => {
   
   return (
     <Card>
-      <Padded>
+      <padded-stack>
         Home
-      </Padded>
+      </padded-stack>
     </Card>
   );
 }

@@ -1,5 +1,5 @@
 // import { JSX, splitProps, children as useChildren } from "solid-js";
-// import style from "./Padded.module.scss";
+// import style from "./padded-stack.module.scss";
 
 
 
@@ -27,7 +27,7 @@
 // // }
 
 
-// export const Padded = (allProps: JSX.IntrinsicElements['div'] & {
+// export const padded-stack = (allProps: JSX.IntrinsicElements['div'] & {
 //   children?: JSX.Element,
 //   h?: PaddingSize,
 //   v?: PaddingSize,
@@ -74,4 +74,4 @@
 //   );
 // }
 
-// export default Padded;
+// export default padded-stack;

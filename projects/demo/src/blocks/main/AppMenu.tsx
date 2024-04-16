@@ -7,9 +7,6 @@ import {
   Tabs,
   Separator,
   Card,
-  Padded,
-  HStack,
-  VStack,
   PaddingSize,
   TBD,
   Menu,
@@ -26,14 +23,14 @@ export const AppMenu = (props: Props) => {
     <Menu
       style={{"height": "100%"}}
     >
-      <HStack>
+      <h-stack>
       <img
         src="/prism.png"
         style={{
           width: "50%"
         }}
       />
-      </HStack>
+      </h-stack>
       <Card>
         Prism
         <div>
@@ -65,7 +62,7 @@ export const AppMenu = (props: Props) => {
       >
         <MenuItem href="/composition#stack">Stack</MenuItem>
         <MenuItem href="/composition#separator">Separator</MenuItem>
-        <MenuItem href="/composition#padded">Padded</MenuItem>
+        <MenuItem href="/composition#padded">padded-stack</MenuItem>
         <MenuItem href="/composition#props">Composition props</MenuItem>
       </MenuGroup>
 
@@ -128,7 +125,7 @@ export const AppMenu = (props: Props) => {
       </MenuGroup>
 
       <Separator/>
-      <Padded padding={PaddingSize.LARGEST}/>
+      <padded-stack padding={PaddingSize.LARGEST}/>
     </Menu>
   );
 }

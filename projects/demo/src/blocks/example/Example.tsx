@@ -2,8 +2,6 @@ import { Demo } from "@theclinician/prism";
 import { JSX,  createMemo,  children as useChildren } from "solid-js";
 import style from "./Example.module.scss";
 import { Token, TokenType, parseCode, trimCode } from "./utils";
-import { Padded } from "@theclinician/prism";
-
 
 
 export const Example = (props: {
@@ -40,9 +38,9 @@ export const Example = (props: {
         ))
       }
     >
-      <Padded>
+      <padded-stack>
         {c()}
-      </Padded>
+      </padded-stack>
     </Demo>
   );
 }

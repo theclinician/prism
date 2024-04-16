@@ -6,10 +6,6 @@ import {
   Tabs,
   Tab,
   useTabs,
-  Padded,
-  HStack,
-  VStack,
-  MStack,
   TBD,
   Card,
   Modal,
@@ -23,7 +19,7 @@ export const ButtonPage = () => {
 
   return (
     <Card>
-      <Padded>
+      <padded-stack>
         <Example
           code={`
             <Button
@@ -50,8 +46,8 @@ export const ButtonPage = () => {
         >
           Disabled
         </Button>
-      </Padded>
-      <Padded>
+      </padded-stack>
+      <padded-stack>
         <Button
           look={ButtonLook.GHOST}
           color={Color.PRIMARY}
@@ -65,8 +61,8 @@ export const ButtonPage = () => {
         >
           Disabled
         </Button>
-      </Padded>
-      <Padded>
+      </padded-stack>
+      <padded-stack>
         <Button
           look={ButtonLook.OUTLINE}
           color={Color.PRIMARY}
@@ -85,7 +81,7 @@ export const ButtonPage = () => {
         >
           Error
         </Button>
-      </Padded>
+      </padded-stack>
     </Card>
   );
 }

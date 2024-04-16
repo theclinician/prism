@@ -6,10 +6,6 @@ import {
   Tabs,
   Tab,
   useTabs,
-  Padded,
-  HStack,
-  VStack,
-  MStack,
   TBD,
   Card,
   Modal,
@@ -32,7 +28,7 @@ export const ActionPage = () => {
           <Button/>
         `}
       >
-        <Padded><div>
+        <padded-stack><div>
           <Button
             look={ButtonLook.GHOST}
           >
@@ -53,7 +49,7 @@ export const ActionPage = () => {
           >
             OUTLINE
           </Button>
-        </div></Padded>
+        </div></padded-stack>
       </Example>
 
       <Example
@@ -61,7 +57,7 @@ export const ActionPage = () => {
           <Button disabled/>
         `}
       >
-        <Padded>
+        <padded-stack>
           <Button
             look={ButtonLook.GHOST}
             disabled
@@ -86,7 +82,7 @@ export const ActionPage = () => {
           >
             OUTLINE
           </Button>
-        </Padded>
+        </padded-stack>
       </Example>
 
       <Example
@@ -94,7 +90,7 @@ export const ActionPage = () => {
           <Button wide/>
         `}
       >
-        <Padded><div>
+        <padded-stack><div>
           <Button
             look={ButtonLook.GHOST}
             wide
@@ -119,7 +115,7 @@ export const ActionPage = () => {
           >
             OUTLINE
           </Button>
-        </div></Padded>
+        </div></padded-stack>
       </Example>
 
 

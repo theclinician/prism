@@ -6,10 +6,6 @@ import {
   Tabs,
   Tab,
   useTabs,
-  Padded,
-  HStack,
-  VStack,
-  MStack,
   TBD,
   FeedCard,
   Feed,
@@ -31,53 +27,53 @@ export const Composition = () => {
       </FeedHeader>
 
       <Example code={`
-        <HStack>
+        <h-stack>
           ...
-        </HStack>
+        </h-stack>
       `}>
-        <HStack>
+        <h-stack>
           <Button>A</Button>
           <Button>B</Button>
           <Button>C</Button>
-        </HStack>
+        </h-stack>
       </Example>
 
       <Example code={`
-        <HStack
+        <h-stack
           gap={PaddingSize.MEDIUM}
         >
           ...
-        </HStack>
+        </h-stack>
       `}>
-        <HStack gap={PaddingSize.MEDIUM}>
+        <h-stack gap={PaddingSize.MEDIUM}>
           <Button>A</Button>
           <Button>B</Button>
           <Button>C</Button>
-        </HStack>
+        </h-stack>
       </Example>
 
       <Example code={`
-        <HStack flip>
+        <h-stack flip>
           ...
-        </HStack>
+        </h-stack>
       `}>
-        <HStack flip>
+        <h-stack flip>
           <Button>A</Button>
           <Button>B</Button>
           <Button>C</Button>
-        </HStack>
+        </h-stack>
       </Example>
 
       <Example code={`
-        <VStack>
+        <v-stack>
           ...
-        </VStack>
+        </v-stack>
       `}>
-        <VStack>
+        <v-stack>
           <Button>A</Button>
           <Button>B</Button>
           <Button>C</Button>
-        </VStack>
+        </v-stack>
       </Example>
 
 
@@ -86,60 +82,60 @@ export const Composition = () => {
       </FeedHeader>
 
       <Example code={`
-        <HStack>
+        <h-stack>
           <Button>A</Button>
           <Button>B</Button>
           <Separator/>
           <Button>C</Button>
-        </HStack>
+        </h-stack>
       `}>
-        <HStack>
+        <h-stack>
           <Button>A</Button>
           <Button>B</Button>
           <Separator/>
           <Button>C</Button>
-        </HStack>
+        </h-stack>
       </Example>
 
 
       <FeedHeader ref={anchors["padded"]}>
-        Padded
+        padded-stack
       </FeedHeader>
 
       <Example code={`
-        <Padded>
+        <padded-stack>
           ...
-        </Padded>
+        </padded-stack>
       `}>
-        <Padded>
+        <padded-stack>
           <Button>A</Button>
           <Button>B</Button>
           <Button>C</Button>
-        </Padded>
+        </padded-stack>
       </Example>
 
       <Example code={`
-        <Padded padding={PaddingSize.SMALLEST}>
+        <padded-stack padding={PaddingSize.SMALLEST}>
           ...
-        </Padded>
+        </padded-stack>
       `}>
-        <Padded padding={PaddingSize.SMALLEST}>
+        <padded-stack padding={PaddingSize.SMALLEST}>
           <Button>A</Button>
           <Button>B</Button>
           <Button>C</Button>
-        </Padded>
+        </padded-stack>
       </Example>
 
       <Example code={`
-        <Padded padding={PaddingSize.LARGEST}>
+        <padded-stack padding={PaddingSize.LARGEST}>
           ...
-        </Padded>
+        </padded-stack>
       `}>
-        <Padded padding={PaddingSize.LARGEST}>
+        <padded-stack padding={PaddingSize.LARGEST}>
           <Button>A</Button>
           <Button>B</Button>
           <Button>C</Button>
-        </Padded>
+        </padded-stack>
       </Example>
 
 

@@ -11,11 +11,19 @@ import "@theclinician/prism/dist/style.css";
 
 import { routes } from "$/app/routes";
 
+console.log("APP LOADED!");
+
+// render(() => (
+//   <div>
+//     EXT::
+//     <PrismWrap>BOO!</PrismWrap>
+//   </div>
+// ), document.getElementById("root")!)
 render(() => (
-    <PrismWrap>
-      <Router>
-        {routes}
-      </Router>
-    </PrismWrap>
+  <PrismWrap>
+    <Router>
+      {routes}
+    </Router>
+  </PrismWrap>
 ), document.getElementById("root")!)
 

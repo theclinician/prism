@@ -1,4 +1,4 @@
-import { JSX, children, children as useChildren } from "solid-js";
+import { JSX, children, createEffect, children as useChildren } from "solid-js";
 import {
   Button,
   ButtonLook,
@@ -7,8 +7,6 @@ import {
   Tabs,
   Tab,
   Scroll,
-  Padded,
-  HStack,
   Centered,
   Separator,
   TBD,
@@ -26,21 +24,23 @@ export type Props = {
 export const Layout = (props: Props) => {
   const c = useChildren(() => props.children)
 
+  // createEffect(() => {
+  //   console.log("CHILDREN", c())
+  // })
+
   return (
-    <HStack tall>
-      <HStack tall style={{"max-width": "1536px"}}>
-        <Scroll style={{"max-width": "240px"}}>
-          <AppMenu/>
-          <Separator/>
-        </Scroll>
+    <h-stack tall={true} data-testid="LayoutBox" style={{"max-width": "1536px"}}>
+      <Scroll style={{"max-width": "240px"}}>
+        <AppMenu/>
         <Separator/>
-        <Scroll style={{"max-width": "720px"}}>
-          {c()}
-          <Separator/>
-        </Scroll>
+      </Scroll>
+      <Separator/>
+      <Scroll style={{"max-width": "720px"}}>
+        {c()}
         <Separator/>
-      </HStack>
-    </HStack>
+      </Scroll>
+      <Separator/>
+    </h-stack>
   );
 }
 

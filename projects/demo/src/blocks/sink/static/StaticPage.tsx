@@ -6,8 +6,6 @@ import {
   Tabs,
   Tab,
   useTabs,
-  Padded,
-  HStack,
   Icon,
   I,
   TBD,
@@ -34,13 +32,13 @@ export const StaticPage = () => {
       <Example code={`
       `}>
         <FeedCard>
-          <HStack>
+          <h-stack>
 
             <Label>
               Hey it's a label!
             </Label>
             <Separator/>
-          </HStack>
+          </h-stack>
         </FeedCard>
       </Example>
       

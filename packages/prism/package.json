@@ -24,11 +24,12 @@
     "build": "vite build"
   },
   "dependencies": {
-    "solid-js": "1.8.8"
+    "solid-js": "1.8.16",
+    "solid-element": "1.8.0"
   },
   "devDependencies": {
-    "sass": "1.69.7",
-    "typescript": "5.3.3",
+    "sass": "1.72.0",
+    "typescript": "5.4.3",
     "vite": "5.0.11",
     "vite-plugin-solid": "2.8.0",
     "vite-plugin-dts": "3.7.0"

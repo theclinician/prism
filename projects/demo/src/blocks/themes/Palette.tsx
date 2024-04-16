@@ -6,10 +6,6 @@ import {
   Tabs,
   Tab,
   useTabs,
-  Padded,
-  HStack,
-  VStack,
-  MStack,
   TBD,
   Card,
   Modal,
@@ -49,11 +45,11 @@ export const Palette = () => {
   
   return (
     <Card>
-      <Padded>
+      <padded-stack>
         <Pan color="hsl(5deg 50% 50%)"/>
         <Pan color="hsl(35deg 50% 50%)"/>
         <Pan color="hsl(55deg 50% 50%)"/>
-      </Padded>
+      </padded-stack>
     </Card>
   );
 }

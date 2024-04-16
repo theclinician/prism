@@ -1,6 +1,4 @@
 import {
-  HStack,
-  VStack,
   Scroll,
 } from "@theclinician/prism";
 import Example from "$/blocks/example/Example";
