@@ -4,30 +4,37 @@ import { compositionClassList, CompositionProps } from "./Composition";
 
 
 export type Props = {
+  children?: JSX.Element,
 }
 
 const defaultProps: Required<Props> = {
+  children: null,
 }
 
 const styleText = `
-  .separator {
-    flex: 1 1 auto;
+  .centered {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 `
 
-prismElement("stack-separator", defaultProps, styleText, (props: Props & CompositionProps) => {
+prismElement("h-centered", defaultProps, styleText, (props: Props & CompositionProps) => {
   useParentStyle(props, () => ({
-    flex: "1 1 auto",
+    width: props.wide ? "100%" : undefined,
+    height: props.tall ? "100%" : undefined,
   }));
 
   return (
     <div
       classList={{
         ...compositionClassList(props),
-        separator: true,
+        centered: true,
       }}
       style={props.styles}
-    />
+    >
+      <slot/>
+    </div>
   );
 });
-

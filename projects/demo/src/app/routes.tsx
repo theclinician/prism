@@ -2,7 +2,7 @@
 
 
 import Layout from "$/blocks/main/Layout"
-import Home from "$/blocks/main/Home"
+import HomePage from "$/blocks/main/HomePage"
 import BodyPage from "$/blocks/sink/body/BodyPage"
 import LayoutPage from "$/blocks/sink/composition/LayoutPage"
 import CompositionPage from "$/blocks/sink/composition/CompositionPage"
@@ -22,7 +22,7 @@ export const routes = [{
   children: [
   
     {
-      path: "/", component: SandboxPage,
+      path: "/", component: HomePage,
     }, {
       path: "/body", component: BodyPage,
     }, {
@@ -80,8 +80,6 @@ export const routes = [{
 //     }
 //   ],
 // }];
-
-console.log("ROUTES", routes);
 
 
 

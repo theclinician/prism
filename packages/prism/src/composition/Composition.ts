@@ -1,6 +1,5 @@
 
-import { splitProps, mergeProps } from "solid-js";
-import style from "./Composition.module.scss";
+import { splitProps, mergeProps, JSX } from "solid-js";
 
 export enum PaddingSize {
   SMALLEST = "SMALLEST",
@@ -13,6 +12,9 @@ export enum PaddingSize {
 }
 
 export type CompositionProps = {
+  parent?: any;
+  styles?: JSX.CSSProperties;
+
   tall?: boolean,
   wide?: boolean,
   padding?: PaddingSize | null,
@@ -25,20 +27,93 @@ export type CompositionProps = {
   gap?: PaddingSize | null,
 }
 
-const compositionKeys: (keyof CompositionProps)[] = [
-  "tall",
-  "wide",
-  "padding",
-  "horizontal",
-  "vertical",
-  "top",
-  "bottom",
-  "left",
-  "right",
-  "gap",
-]
+export const defaultCompositionProps: Required<CompositionProps> = {
+  parent: null,
+  styles: {},
+  tall: false,
+  wide: false,
+  padding: null,
+  horizontal: null,
+  vertical: null,
+  top: null,
+  bottom: null,
+  left: null,
+  right: null,
+  gap: null,
+}
+
+const compositionKeys: (keyof CompositionProps)[] = Object.keys(defaultCompositionProps) as (keyof CompositionProps)[];
+
 
 export const compositionStyleText = `
+  // http://meyerweb.com/eric/tools/css/reset/
+  //  v2.0 | 20110126
+  //  License: none (public domain)
+  // Added lines by @subhog
+  //  2023-12-29
+
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video,
+  input, textarea { // Added tags
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none; // Added rule
+    box-sizing: border-box; // Added rule
+  }
+
+  // HTML5 display-role reset for older browsers
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  button, button:active, button:focus { // Added section
+    -webkit-appearance: none;
+    border: 0px solid none;
+    border-width: 0px;
+    box-shadow: none;
+    outline: none;
+  }
+
+  html, body, #root {
+    height: 100%;
+  
+    background: var(--prism-body-background);
+    color: var(--prism-body-color);
+    font-family: var(--prism-font-body);
+  }
+
   .tall { height: 100%; }
   .wide { width: 100%; }
   .gapSmallest { gap: var(--prism-padding-smallest); }
@@ -87,8 +162,6 @@ export const useCompositionProps = <Props>(
 }
 
 
-
-
 export const compositionClassList = (props: CompositionProps) => {
   const paddingLeft = props.left ?? props.horizontal ?? props.padding ?? null;
   const paddingRight = props.right ?? props.horizontal ?? props.padding ?? null;
@@ -134,44 +207,5 @@ export const compositionClassList = (props: CompositionProps) => {
     paddingBottomLarger: paddingBottom === PaddingSize.LARGER,
     paddingBottomLargest: paddingBottom === PaddingSize.LARGEST,
   };
-  // return {
-  //   [style.tall]: props.tall,
-  //   [style.wide]: props.wide,
-  //   [style.gapSmallest]: props.gap === PaddingSize.SMALLEST,
-  //   [style.gapSmaller]: props.gap === PaddingSize.SMALLER,
-  //   [style.gapSmall]: props.gap === PaddingSize.SMALL,
-  //   [style.gapMedium]: props.gap === PaddingSize.MEDIUM,
-  //   [style.gapLarge]: props.gap === PaddingSize.LARGE,
-  //   [style.gapLarger]: props.gap === PaddingSize.LARGER,
-  //   [style.gapLargest]: props.gap === PaddingSize.LARGEST,
-  //   [style.paddingLeftSmallest]: paddingLeft === PaddingSize.SMALLEST,
-  //   [style.paddingLeftSmaller]: paddingLeft === PaddingSize.SMALLER,
-  //   [style.paddingLeftSmall]: paddingLeft === PaddingSize.SMALL,
-  //   [style.paddingLeftMedium]: paddingLeft === PaddingSize.MEDIUM,
-  //   [style.paddingLeftLarge]: paddingLeft === PaddingSize.LARGE,
-  //   [style.paddingLeftLarger]: paddingLeft === PaddingSize.LARGER,
-  //   [style.paddingLeftLargest]: paddingLeft === PaddingSize.LARGEST,
-  //   [style.paddingRightSmallest]: paddingRight === PaddingSize.SMALLEST,
-  //   [style.paddingRightSmaller]: paddingRight === PaddingSize.SMALLER,
-  //   [style.paddingRightSmall]: paddingRight === PaddingSize.SMALL,
-  //   [style.paddingRightMedium]: paddingRight === PaddingSize.MEDIUM,
-  //   [style.paddingRightLarge]: paddingRight === PaddingSize.LARGE,
-  //   [style.paddingRightLarger]: paddingRight === PaddingSize.LARGER,
-  //   [style.paddingRightLargest]: paddingRight === PaddingSize.LARGEST,
-  //   [style.paddingTopSmallest]: paddingTop === PaddingSize.SMALLEST,
-  //   [style.paddingTopSmaller]: paddingTop === PaddingSize.SMALLER,
-  //   [style.paddingTopSmall]: paddingTop === PaddingSize.SMALL,
-  //   [style.paddingTopMedium]: paddingTop === PaddingSize.MEDIUM,
-  //   [style.paddingTopLarge]: paddingTop === PaddingSize.LARGE,
-  //   [style.paddingTopLarger]: paddingTop === PaddingSize.LARGER,
-  //   [style.paddingTopLargest]: paddingTop === PaddingSize.LARGEST,
-  //   [style.paddingBottomSmallest]: paddingBottom === PaddingSize.SMALLEST,
-  //   [style.paddingBottomSmaller]: paddingBottom === PaddingSize.SMALLER,
-  //   [style.paddingBottomSmall]: paddingBottom === PaddingSize.SMALL,
-  //   [style.paddingBottomMedium]: paddingBottom === PaddingSize.MEDIUM,
-  //   [style.paddingBottomLarge]: paddingBottom === PaddingSize.LARGE,
-  //   [style.paddingBottomLarger]: paddingBottom === PaddingSize.LARGER,
-  //   [style.paddingBottomLargest]: paddingBottom === PaddingSize.LARGEST,
-  // };
 }
 

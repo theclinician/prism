@@ -1,4 +1,5 @@
 
+
 /* Utils ============================================================ */
 
 export { Color } from "$/utils/Color";
@@ -14,11 +15,15 @@ export { default as PrismWrap } from "$/body/PrismWrap";
 
 /* Composition ============================================================ */
 
-export { PaddingSize, type CompositionProps, useCompositionProps, compositionClassList } from "$/composition/Composition";
-// export { default as padded-stack } from "$/composition/padded-stack";
-export { default as RightFloat } from "$/composition/RightFloat";
-export { default as Separator } from "$/composition/Separator";
-export { default as Scroll } from "$/composition/Scroll";
+export {
+  PaddingSize,
+  type CompositionProps,
+  useCompositionProps,
+  compositionClassList,
+} from "$/composition/Composition";
+import "$/composition/Centered";
+import "$/composition/Separator";
+import "$/composition/Scroll";
 import "$/composition/Stack";
 
 

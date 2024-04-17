@@ -37,7 +37,7 @@ export const StaticPage = () => {
             <Label>
               Hey it's a label!
             </Label>
-            <Separator/>
+            <stack-separator/>
           </h-stack>
         </FeedCard>
       </Example>

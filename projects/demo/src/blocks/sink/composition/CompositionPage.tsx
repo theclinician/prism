@@ -11,10 +11,12 @@ import {
   Feed,
   PaddingSize,
   FeedHeader,
-  Separator,
 } from "@theclinician/prism";
 import { Example } from "$/blocks/example";
 import { useAnchors } from "$/blocks/anchors";
+
+
+
 
 
 export const Composition = () => {
@@ -53,11 +55,11 @@ export const Composition = () => {
       </Example>
 
       <Example code={`
-        <h-stack flip>
+        <h-stack flip={true}>
           ...
         </h-stack>
       `}>
-        <h-stack flip>
+        <h-stack flip={true}>
           <Button>A</Button>
           <Button>B</Button>
           <Button>C</Button>
@@ -74,6 +76,24 @@ export const Composition = () => {
           <Button>B</Button>
           <Button>C</Button>
         </v-stack>
+      </Example>
+
+      <Example code={`
+        <z-stack>
+          ...
+        </z-stack>
+      `}>
+        <z-stack wide={true}>
+          <h-centered>
+            <Button>Center</Button>
+          </h-centered>
+          <z-item>
+            <h-stack wide={true}>
+              <stack-separator/>
+              <Button>X</Button>
+            </h-stack>
+          </z-item>
+        </z-stack>
       </Example>
 
 
@@ -82,17 +102,17 @@ export const Composition = () => {
       </FeedHeader>
 
       <Example code={`
-        <h-stack>
+        <h-stack wide={true}>
           <Button>A</Button>
           <Button>B</Button>
-          <Separator/>
+          <stack-separator/>
           <Button>C</Button>
         </h-stack>
       `}>
-        <h-stack>
+        <h-stack wide={true}>
           <Button>A</Button>
           <Button>B</Button>
-          <Separator/>
+          <stack-separator/>
           <Button>C</Button>
         </h-stack>
       </Example>

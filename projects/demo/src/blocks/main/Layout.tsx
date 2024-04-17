@@ -21,6 +21,7 @@ export type Props = {
   children?: JSX.Element;
 }
 
+
 export const Layout = (props: Props) => {
   const c = useChildren(() => props.children)
 
@@ -28,20 +29,23 @@ export const Layout = (props: Props) => {
   //   console.log("CHILDREN", c())
   // })
 
+  // <h-stack tall={true} styles={"max-width: 536px"}>
   return (
-    <h-stack tall={true} data-testid="LayoutBox" style={{"max-width": "1536px"}}>
-      <Scroll style={{"max-width": "240px"}}>
+    <h-stack tall={true} styles={{"max-width": "1536px"}}>
+      <v-scroll wide={true} styles={{"max-width": "240px"}}>
         <AppMenu/>
-        <Separator/>
-      </Scroll>
-      <Separator/>
-      <Scroll style={{"max-width": "720px"}}>
+        <stack-separator/>
+      </v-scroll>
+      <stack-separator/>
+      <v-scroll wide={true} styles={{"max-width": "720px"}}>
         {c()}
-        <Separator/>
-      </Scroll>
-      <Separator/>
+        <stack-separator/>
+      </v-scroll>
+      <stack-separator/>
     </h-stack>
   );
 }
+// {/* <h-stack tall={true} styleOverride={{"max-width": "536px"}}> */}
 
 export default Layout;
+

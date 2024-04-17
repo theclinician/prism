@@ -18,6 +18,7 @@ import {
 } from "@theclinician/prism";
 import { Example } from "$/blocks/example";
 import { createSignal, onCleanup, onMount } from "solid-js";
+import { PaddingSize } from "@theclinician/prism";
 
 
 
@@ -59,6 +60,19 @@ export const SandboxPage = () => {
         `}
       >
         <padded-stack>
+          THIS IS PADDED! {clock()}
+        </padded-stack>
+      </Example>
+
+    
+    <Example
+        code={`
+          <padded-stack>
+            {clock()}
+          </padded-stack>
+        `}
+      >
+        <padded-stack padding={PaddingSize.LARGEST}>
           THIS IS PADDED! {clock()}
         </padded-stack>
       </Example>

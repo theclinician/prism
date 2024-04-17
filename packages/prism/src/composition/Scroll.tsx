@@ -1,24 +1,45 @@
-import { JSX, splitProps, children as useChildren } from "solid-js";
-import style from "./Scroll.module.scss";
+import { JSX } from "solid-js";
+import { prismElement, useParentStyle } from "$/utils/prismElement";
+import { compositionClassList, CompositionProps } from "./Composition";
 
-export const Scroll = (allProps: JSX.IntrinsicElements['div'] & {
+
+export type Props = {
   children?: JSX.Element,
-}) => {
-  const [props, other] = splitProps(allProps, [
-    "children",
-  ]);
+  styles?: JSX.CSSProperties;
+}
 
-  const c = useChildren(() => props.children);
+const defaultProps: Required<Props> = {
+  children: null,
+  styles: {},
+}
+
+const styleText = `
+  .scroll {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
+  }
+`
+
+prismElement("v-scroll", defaultProps, styleText, (props: Props & CompositionProps) => {
+  useParentStyle(props, () => ({
+    width: props.wide ? "100%" : undefined,
+    height: "100%",
+  }));
+
   return (
     <div
       classList={{
-        [style.scroll]: true,
+        ...compositionClassList(props),
+        scroll: true,
       }}
-      {...other}
+      style={props.styles}
     >
-      {c()}
+      <slot/>
     </div>
   );
-}
-
-export default Scroll;
+});

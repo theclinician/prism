@@ -12,7 +12,7 @@ import {
 } from "@theclinician/prism";
 
 
-export const Home = () => {
+export const HomePage = () => {
   
   return (
     <Card>
@@ -23,4 +23,4 @@ export const Home = () => {
   );
 }
 
-export default Home;
+export default HomePage;

@@ -124,7 +124,7 @@ export const AppMenu = (props: Props) => {
         <MenuItem href="/theme#fonts">Fonts</MenuItem>
       </MenuGroup>
 
-      <Separator/>
+      <stack-separator/>
       <padded-stack padding={PaddingSize.LARGEST}/>
     </Menu>
   );

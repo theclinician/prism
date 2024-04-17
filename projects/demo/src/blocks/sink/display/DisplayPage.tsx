@@ -17,11 +17,11 @@ import { Code, Demo, Example } from "$/blocks/example";
 export const DisplayPage = () => {
   
   return (
-    <Scroll>
+    <v-scroll>
       <Example>
         DisplayPage
       </Example>
-    </Scroll>
+    </v-scroll>
   );
 }
 

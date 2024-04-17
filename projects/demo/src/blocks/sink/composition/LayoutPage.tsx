@@ -7,14 +7,14 @@ import Example from "$/blocks/example/Example";
 export const Layout = () => {
   
   return (
-    <Scroll>
+    <v-scroll>
       <Example code={`<body>`}>
       </Example>
       <Example code={`<div id="root">`}>
       </Example>
       <Example code={`<PrismWrap>`}>
       </Example>
-    </Scroll>
+    </v-scroll>
 
   );
 }

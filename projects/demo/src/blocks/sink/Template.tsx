@@ -17,11 +17,11 @@ import { Code, Demo, Example } from "$/blocks/example";
 export const Template = () => {
   
   return (
-    <Scroll>
+    <v-scroll>
       <Example>
         Template
       </Example>
-    </Scroll>
+    </v-scroll>
   );
 }
 

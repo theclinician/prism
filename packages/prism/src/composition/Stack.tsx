@@ -1,15 +1,11 @@
-import { createEffect, JSX, mergeProps, splitProps, children as useChildren } from "solid-js";
-import { customElement, noShadowDOM } from 'solid-element';
-import style from "./Stack.module.scss";
+import { createEffect, JSX, onMount } from "solid-js";
 import {
   compositionClassList,
   CompositionProps,
   compositionStyleText,
   PaddingSize,
-  useCompositionProps,
 } from "./Composition";
-import { render } from "solid-js/web";
-import { prismElement } from "$/utils/prismElement";
+import { prismElement, useParentStyle } from "$/utils/prismElement";
 
 export type Props = {
   flip?: boolean,
@@ -23,259 +19,137 @@ const defaultProps: Required<Props> = {
 
 const styleText = `
   .hstack {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: red;
   }
 
   .vstack {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
+  .zstack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .zitem {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+  }
 `;
 
 
+prismElement("v-stack", defaultProps, styleText, (props: Props & CompositionProps) => {
+  useParentStyle(props, () => ({
+    width: props.wide ? "100%" : undefined,
+    height: props.tall ? "100%" : undefined,
+  }));
 
-customElement("v-stack", (allProps: Props & CompositionProps & JSX.IntrinsicElements['div'], {element}: {element: any}) => {
-  // noShadowDOM();
-  const [composition, props, other] = useCompositionProps(allProps, defaultProps);
-  // const c = useChildren(() => props.children);
-
-  return <>
-    <style>
-      {compositionStyleText}
-      {styleText}
-    </style>
+  return (
     <div
       classList={{
-        ...compositionClassList(composition),
+        ...compositionClassList(props),
         vstack: !props.flip,
         hstack: !!props.flip,
       }}
-      {...other}
+      style={props.styles}
     >
       <slot/>
     </div>
-  </>
-
-  // render(() => (
-  //   <div
-  //     classList={{
-  //       ...compositionClassList(composition),
-  //       [style.vstack]: !props.flip,
-  //       [style.hstack]: !!props.flip,
-  //     }}
-  //     {...other}
-  //   >
-  //     {c()}
-  //   </div>
-  // ), element);
+  );
 });
-// prismElement("v-stack", (allProps: Props & CompositionProps & JSX.IntrinsicElements['div']) => {
-//   const [composition, props, other] = useCompositionProps(allProps, defaultProps);
-//   const c = useChildren(() => props.children);
 
-//   return (
-//     <div
-//       classList={{
-//         ...compositionClassList(composition),
-//         vstack: !props.flip,
-//         hstack: !!props.flip,
-//       }}
-//       {...other}
-//     >
-//       {c()}
-//     </div>
-//   );
-// });
-
-customElement("h-stack", {tall: false}, (allProps: Props & CompositionProps & JSX.IntrinsicElements['div'], {element}: {element: any}) => {
-  // noShadowDOM();
-  const [composition, props, other] = useCompositionProps(allProps, defaultProps);
-  // const c = useChildren(() => props.children);
-
-  // const cn = element.childNodes;
-  
-  // console.log("HELEMENT", element);
-
-  // console.log("CHILDRFEN?", allProps);
-  createEffect(() => {
-
-    console.log("HSTACK COMP",
-      allProps,
-      composition,
-      compositionClassList(composition)
-    );
-  })
+prismElement("h-stack", defaultProps, styleText, (props: Props & CompositionProps) => {
+  useParentStyle(props, () => ({
+    width: props.wide ? "100%" : undefined,
+    height: props.tall ? "100%" : undefined,
+  }));
 
   return (
-    <>
-      <style>
-        {compositionStyleText}
-        {styleText}
-      </style>
+    <div
+      classList={{
+        ...compositionClassList(props),
+        hstack: !props.flip,
+        vstack: !!props.flip,
+      }}
+      style={props.styles}
+    >
+      <slot/>
+    </div>
+  );
+});
+
+
+prismElement(
+  'padded-stack',
+  {...defaultProps, padding: PaddingSize.MEDIUM},
+  styleText,
+  (props: Props & CompositionProps) => {
+    useParentStyle(props, () => ({
+      width: props.wide ? "100%" : undefined,
+      height: props.tall ? "100%" : undefined,
+    }));
+
+    return (
       <div
         classList={{
-          ...compositionClassList(composition),
+          ...compositionClassList(props),
           hstack: !props.flip,
           vstack: !!props.flip,
         }}
-        style={{"background-color": "olive"}}
-        {...other}
+        style={props.styles}
       >
         <slot/>
       </div>
-    </>
-  );
-  // ), element);
-  // render(() => (
-  //   <div
-  //     classList={{
-  //       ...compositionClassList(composition),
-  //       [style.hstack]: !props.flip,
-  //       [style.vstack]: !!props.flip,
-  //     }}
-  //     style={{"background-color": "olive"}}
-  //     {...other}
-  //   >
-  //     <slot/>
-  //   </div>
-  // ), element);
-});
-// prismElement("h-stack", (allProps: Props & JSX.IntrinsicElements['div']) => {
-//   const [composition, props, other] = useCompositionProps(allProps, defaultProps);
-//   const c = useChildren(() => props.children);
+    );
+  }
+);
 
-//   return (
-//     <div
-//       classList={{
-//         ...compositionClassList(composition),
-//         hstack: !props.flip,
-//         vstack: !!props.flip,
-//       }}
-//       style={{"background-color": "olive"}}
-//       {...other}
-//     >
-//       {c()}
-//     </div>
-//   );
-// });
+prismElement("z-stack", defaultProps, styleText, (props: Props & CompositionProps) => {
+  useParentStyle(props, () => ({
+    width: props.wide ? "100%" : undefined,
+    height: props.tall ? "100%" : undefined,
+  }));
 
-customElement('padded-stack', (allProps: Props & CompositionProps & JSX.IntrinsicElements['div'], {element}: {element: any}) => {
-  // noShadowDOM();
-  const [composition, props, other] = useCompositionProps(allProps, defaultProps);
-  const compositionWithPadding = mergeProps({ padding: PaddingSize.MEDIUM }, composition);
   return (
-    <>
-    <style>
-        {compositionStyleText}
-        {styleText}
-      </style>
     <div
       classList={{
-        ...compositionClassList(compositionWithPadding),
-        vstack: !props.flip,
-        hstack: !!props.flip,
+        ...compositionClassList(props),
+        zstack: true,
       }}
-      {...other}
+      style={props.styles}
     >
-      <slot/> 
+      <slot/>
     </div>
-    </>
   );
-  // render(() => (
-  //   <div
-  //     classList={{
-  //       ...compositionClassList(compositionWithPadding),
-  //       [style.vstack]: !props.flip,
-  //       [style.hstack]: !!props.flip,
-  //     }}
-  //     {...other}
-  //   >
-  //     <slot/> 
-  //   </div>
-  // ), element);
 });
-// prismElement('padded-stack', (allProps: Props & JSX.IntrinsicElements['div']) => {
-//   const [composition, props, other] = useCompositionProps(allProps, defaultProps);
-//   const compositionWithPadding = mergeProps({ padding: PaddingSize.MEDIUM }, composition);
-//   return (
-//     <div
-//       classList={{
-//         ...compositionClassList(compositionWithPadding),
-//         vstack: !props.flip,
-//         hstack: !!props.flip,
-//       }}
-//       {...other}
-//     >
-//       <slot/> 
-//     </div>
-//   );
-// });
 
-declare module "solid-js" {
-  namespace JSX {
-    interface IntrinsicElements { 
-      'h-stack': any;
-      'v-stack': any;
-      'padded-stack': any;
-    }
-  }
-}
+prismElement("z-item", defaultProps, styleText, (props: Props & CompositionProps) => {
+  useParentStyle(props, () => ({
+    width: props.wide ? "100%" : undefined,
+    height: props.tall ? "100%" : undefined,
+  }));
 
-
-// declare global {
-//   namespace JSX {
-//     interface IntrinsicElements {
-//       "padded-stack": any;
-//     }
-//   }
-// }
-
-
-// export const MStack = (allProps: Props & JSX.IntrinsicElements['div']) => {
-//   const [props, other] = useProps(allProps, defaultProps);
-
-//   const c = useChildren(() => props.children);
-//   return (
-//     <div
-//       classList={{
-//         [style.mstack]: true,
-//         [style.tall]: props.tall,
-//         [style.wide]: props.wide,
-//       }}
-//       {...other}
-//     >
-//       {c()}
-//     </div>
-//   );
-// }
-
-
-// export const ZStack = (allProps: Props & JSX.IntrinsicElements['div']) => {
-//   const [props, other] = useProps(allProps, defaultProps);
-
-//   const c = useChildren(() => props.children);
-//   return (
-//     <div
-//       classList={{
-//         [style.zstack]: true,
-//         [style.tall]: props.tall,
-//         [style.wide]: props.wide,
-//       }}
-//       {...other}
-//     >
-//       {c()}
-//     </div>
-//   );
-// }
-
-
+  return (
+    <div
+      classList={{
+        ...compositionClassList(props),
+        zitem: true,
+      }}
+      style={props.styles}
+    >
+      <slot/>
+    </div>
+  );
+});
 
 

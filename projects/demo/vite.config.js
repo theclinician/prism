@@ -17,6 +17,9 @@ export default defineConfig(({command, mode}) => ({
       key: fs.readFileSync(`${__dirname}/config/prism-local.dev-key.gitignored.pem`),
       cert: fs.readFileSync(`${__dirname}/config/prism-local.dev.gitignored.pem`),
     },
+    fs: {
+      allow: [`${__dirname}`, `${__dirname}/../../common/temp/node_modules`],
+    },
   } : {},
   base: '/',
   plugins: [
