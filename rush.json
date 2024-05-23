@@ -208,7 +208,7 @@
   },
 
   "repository": {
-    "url": "https://github.com/theclinician/prism",
+    "url": "https://github.com/subhog/hakina",
     "defaultBranch": "master",
     "defaultRemote": "origin"
   },
@@ -318,15 +318,15 @@
    */
   "projects": [
     {
-      "packageName": "@theclinician/prism",
-      "projectFolder": "packages/prism",
+      "packageName": "@hakina/ui",
+      "projectFolder": "packages/ui",
       "tags": ["package"],
       "shouldPublish": true
       // "reviewCategory": "tools",
       // "tags": [ "tools" ]
     },
     {
-      "packageName": "@theclinician/prism-demo",
+      "packageName": "@hakina/demo",
       "projectFolder": "projects/demo"
       // "reviewCategory": "tools",
       // "tags": [ "tools" ]

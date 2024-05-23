@@ -1,6 +1,5 @@
 
 import {
-  Button,
   ButtonLook,
   Color,
   Heading3,
@@ -15,10 +14,10 @@ import {
   MenuGroup,
   MenuItem,
   MenuLook,
-} from "@theclinician/prism";
+  PaddingSize,
+} from "@hakina/ui";
 import { Example } from "$/blocks/example";
 import { createSignal, onCleanup, onMount } from "solid-js";
-import { PaddingSize } from "@theclinician/prism";
 
 
 
@@ -54,27 +53,27 @@ export const SandboxPage = () => {
 
       <Example
         code={`
-          <padded-stack>
+          <el-padded-stack>
             {clock()}
-          </padded-stack>
+          </el-padded-stack>
         `}
       >
-        <padded-stack>
+        <el-padded-stack>
           THIS IS PADDED! {clock()}
-        </padded-stack>
+        </el-padded-stack>
       </Example>
 
     
     <Example
         code={`
-          <padded-stack>
+          <el-padded-stack>
             {clock()}
-          </padded-stack>
+          </el-padded-stack>
         `}
       >
-        <padded-stack padding={PaddingSize.LARGEST}>
+        <el-padded-stack padding={PaddingSize.LARGEST}>
           THIS IS PADDED! {clock()}
-        </padded-stack>
+        </el-padded-stack>
       </Example>
     </Feed>
   );

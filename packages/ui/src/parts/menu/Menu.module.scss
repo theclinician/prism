@@ -1,0 +1,74 @@
+@import "$/body/preamble.scss";
+
+.menu {
+  width: 100%;
+  background-color: var(--hakina-menu-background);
+  padding: 0px 16px;
+}
+
+.group {
+  padding: 0px;
+}
+
+.title {
+  padding: 12px 0px 8px;
+  // @include font-small-medium;
+  color: var(--dusk-color-ice);
+}
+
+.noTitle {
+  height: 20px;
+}
+
+
+.groupCapsule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.capsule .groupCapsule {
+  border-radius: 4px;
+  border: 1px solid var(--hakina-menu-group-border);
+  background: var(--hakina-menu-group-background);
+}
+
+.ghost .groupCapsule {
+  background: none;
+  border: none;
+}
+
+
+
+
+.item {
+  width: 100%;
+  position: relative;
+  // @include font-body-regular;
+  text-align: start;
+  color: var(--hakina-menu-item-color);
+  padding: 16px;
+
+  display: block;
+  background: none;
+
+  &:hover {
+    // background-color: var(--background-hover);
+  }
+
+  
+}
+
+
+.capsule .item {
+  &:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    height: 1px;
+    background-color: var(--hakina-menu-item-border);
+    width: calc(100% - 32px);
+  }
+}

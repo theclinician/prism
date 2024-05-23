@@ -1,0 +1,13 @@
+body.hakina-light {
+
+
+}
+
+.hakina-red {
+  --color-lightest: #FF8080;
+  --color-light: #FF2020;
+  --color-main: #c00000;
+  --color-dark: #800000;
+  --color-darkest: #300000;
+  --color-text: #c00000;
+}

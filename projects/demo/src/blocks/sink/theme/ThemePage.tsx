@@ -1,7 +1,6 @@
 import { JSX, createSignal, onMount, children as useChildren } from "solid-js";
 
 import {
-  Button,
   ButtonLook,
   Color,
   Heading3,
@@ -14,7 +13,7 @@ import {
   Card,
   Feed,
   Modal,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 import style from "./ThemePage.module.scss";
 import { useAnchors } from "$/blocks/anchors";
 

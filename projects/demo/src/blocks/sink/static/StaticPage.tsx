@@ -14,7 +14,7 @@ import {
   FeedCard,
   Divider,
   Label,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 
 import { Example } from "$/blocks/example";
 import { useAnchors } from "$/blocks/anchors";
@@ -32,13 +32,13 @@ export const StaticPage = () => {
       <Example code={`
       `}>
         <FeedCard>
-          <h-stack>
+          <el-h-stack>
 
             <Label>
               Hey it's a label!
             </Label>
             <stack-separator/>
-          </h-stack>
+          </el-h-stack>
         </FeedCard>
       </Example>
       

@@ -1,19 +1,17 @@
 import { JSX, children, createEffect, children as useChildren } from "solid-js";
 import {
-  Button,
+  
   ButtonLook,
   Color,
   Heading3,
   Tabs,
   Tab,
-  Scroll,
-  Centered,
-  Separator,
+  
   TBD,
   Card,
   Modal,
   Mobile,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 
 import AppMenu from "./AppMenu"
 
@@ -29,23 +27,23 @@ export const Layout = (props: Props) => {
   //   console.log("CHILDREN", c())
   // })
 
-  // <h-stack tall={true} styles={"max-width: 536px"}>
+  // <el-h-stack tall={true} styles={"max-width: 536px"}>
   return (
-    <h-stack tall={true} styles={{"max-width": "1536px"}}>
-      <v-scroll wide={true} styles={{"max-width": "240px"}}>
+    <el-h-stack tall={true} styles={{"max-width": "1536px"}}>
+      <el-v-scroll wide={true} styles={{"max-width": "240px"}}>
         <AppMenu/>
-        <stack-separator/>
-      </v-scroll>
+        <el-stack-separator/>
+      </el-v-scroll>
       <stack-separator/>
-      <v-scroll wide={true} styles={{"max-width": "720px"}}>
+      <el-v-scroll wide={true} styles={{"max-width": "720px"}}>
         {c()}
-        <stack-separator/>
-      </v-scroll>
-      <stack-separator/>
-    </h-stack>
+        <el-stack-separator/>
+      </el-v-scroll>
+      <el-stack-separator/>
+    </el-h-stack>
   );
 }
-// {/* <h-stack tall={true} styleOverride={{"max-width": "536px"}}> */}
+// {/* <el-h-stack tall={true} styleOverride={{"max-width": "536px"}}> */}
 
 export default Layout;
 

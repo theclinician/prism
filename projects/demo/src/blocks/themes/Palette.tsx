@@ -1,5 +1,4 @@
 import {
-  Button,
   ButtonLook,
   Color,
   Heading3,
@@ -9,7 +8,7 @@ import {
   TBD,
   Card,
   Modal,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 import { JSX, children as useChildren } from "solid-js";
 
 
@@ -45,11 +44,11 @@ export const Palette = () => {
   
   return (
     <Card>
-      <padded-stack>
+      <el-padded-stack>
         <Pan color="hsl(5deg 50% 50%)"/>
         <Pan color="hsl(35deg 50% 50%)"/>
         <Pan color="hsl(55deg 50% 50%)"/>
-      </padded-stack>
+      </el-padded-stack>
     </Card>
   );
 }

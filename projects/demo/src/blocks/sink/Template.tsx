@@ -1,16 +1,13 @@
 import {
-  Button,
   ButtonLook,
   Color,
   Heading3,
   Tabs,
   Tab,
   useTabs,
-  Scroll,
-  TBD,
   Card,
   Modal,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 import { Code, Demo, Example } from "$/blocks/example";
 
 

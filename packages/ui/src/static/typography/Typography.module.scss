@@ -1,0 +1,47 @@
+@import "$/body/preamble.scss";
+
+.heading1 {
+  font: var(--hakina-typography-heading1-font);
+}
+
+.heading2 {
+  font: var(--hakina-typography-heading2-font);
+}
+
+.heading3 {
+  font: var(--hakina-typography-heading3-font);
+}
+
+.heading4 {
+  font: var(--hakina-typography-heading4-font);
+}
+
+
+
+.paragraph {
+  // @include font-body-regular;
+}
+
+.caption {
+  // @include font-caption-regular;
+}
+
+
+.centered {
+  text-align: center;
+}
+
+.secondaryText {
+  color: var(--text-secondary);
+  fill: var(--text-secondary);
+}
+
+.errorText {
+  color: var(--color-error);
+  fill: var(--color-error);
+}
+
+.brandText {
+  color: var(--color-brand);
+  fill: var(--color-brand);
+}

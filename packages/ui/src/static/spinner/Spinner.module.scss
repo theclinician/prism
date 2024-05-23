@@ -1,0 +1,41 @@
+
+.spinner {
+  width: 48px;
+  height: 48px;
+}
+
+.inner {
+  width: 48px;
+  height: 48px;
+  animation: hakina-spinner-spin 2s linear infinite;
+}
+
+.groovy .inner {
+  animation: hakina-spinner-groovy 2s linear infinite;
+}
+
+.groovy .image {
+  animation: hakina-spinner-spin 9s linear infinite;
+}
+
+@keyframes hakina-spinner-spin { 
+  100% { 
+    transform: rotate(-360deg); 
+  }
+}
+
+@keyframes hakina-spinner-groovy { 
+  25% { 
+    transform: rotate(-120deg); 
+  }
+  50% { 
+    transform: rotate(-150deg); 
+  }
+  75% { 
+    transform: rotate(-300deg); 
+  }
+  100% { 
+    transform: rotate(-360deg); 
+  }
+}
+

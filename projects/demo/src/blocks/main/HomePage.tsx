@@ -1,5 +1,4 @@
 import {
-  Button,
   ButtonLook,
   Color,
   Heading3,
@@ -9,16 +8,16 @@ import {
   TBD,
   Card,
   Modal,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 
 
 export const HomePage = () => {
   
   return (
     <Card>
-      <padded-stack>
+      <el-padded-stack>
         Home
-      </padded-stack>
+      </el-padded-stack>
     </Card>
   );
 }

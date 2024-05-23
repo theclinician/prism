@@ -1,6 +1,5 @@
 
 import {
-  Button,
   ButtonLook,
   Color,
   Heading3,
@@ -15,7 +14,7 @@ import {
   MenuGroup,
   MenuItem,
   MenuLook,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 import { Example } from "$/blocks/example";
 import { useAnchors } from "$/blocks/anchors";
 
@@ -129,18 +128,18 @@ export const PartPage = () => {
 
       <Example
         code={`
-          <padded-stack>
+          <el-padded-stack>
             <Demo code={"A B <div>c</div> D"}>
               A B <div>c</div> D
             </Demo>
-          </padded-stack>
+          </el-padded-stack>
         `}
       >
-        <padded-stack>
+        <el-padded-stack>
           <Demo code={"A B <div>c</div> D"}>
             A B <div>c</div> D
           </Demo>
-        </padded-stack>
+        </el-padded-stack>
       </Example>
 
     </Feed>

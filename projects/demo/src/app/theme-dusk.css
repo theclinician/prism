@@ -21,30 +21,30 @@ body {
 
   /* ===== UTILS ========================= */
 
-  /* --prism-background-lowest: var(--dusk-color-black);
-  --prism-background-lower: var(--dusk-color-mist);
-  --prism-background-low: var(--dusk-color-indigo);
-  --prism-background-middle: var(--dusk-color-indigo);
-  --prism-background-high: var(--dusk-color-indigo);
-  --prism-background-higher: var(--dusk-color-indigo);
-  --prism-background-highest: var(--dusk-color-indigo);
+  /* --hakina-background-lowest: var(--dusk-color-black);
+  --hakina-background-lower: var(--dusk-color-mist);
+  --hakina-background-low: var(--dusk-color-indigo);
+  --hakina-background-middle: var(--dusk-color-indigo);
+  --hakina-background-high: var(--dusk-color-indigo);
+  --hakina-background-higher: var(--dusk-color-indigo);
+  --hakina-background-highest: var(--dusk-color-indigo);
 
-  --prism-line-high: var(--dusk-color-azure);
+  --hakina-line-high: var(--dusk-color-azure);
 
-  --prism-foreground-low: var(--dusk-color-ice);
-  --prism-foreground-middle: var(--dusk-color-ice);
-  --prism-foreground-high: var(--dusk-color-white); */
+  --hakina-foreground-low: var(--dusk-color-ice);
+  --hakina-foreground-middle: var(--dusk-color-ice);
+  --hakina-foreground-high: var(--dusk-color-white); */
 
 
 
   /* ===== BODY ========================= */
 
-  --prism-body-background: var(--dusk-color-black);
-  --prism-body-color: var(--dusk-color-offwhite);
+  --hakina-body-background: var(--dusk-color-black);
+  --hakina-body-color: var(--dusk-color-offwhite);
 
-  --prism-font-header: var(--dusk-font-header);
-  --prism-font-body: var(--dusk-font-body);
-  --prism-font-mono: var(--dusk-font-mono);
+  --hakina-font-header: var(--dusk-font-header);
+  --hakina-font-body: var(--dusk-font-body);
+  --hakina-font-mono: var(--dusk-font-mono);
 
   /* ===== COMPOSITION ========================= */
 
@@ -52,12 +52,12 @@ body {
 
   /* ===== ACTIONS ========================= */
 
-  --prism-button-background: var(--dusk-color-ice);
-  --prism-button-accent: var(--dusk-color-cerulean);
-  --prism-button-text: var(--dusk-color-offwhite);
-  --prism-button-outline: var(--dusk-color-ice);
-  --prism-button-hover-background: var(--dusk-color-cerulean);
-  --prism-button-hover-text: var(--dusk-color-white);
+  --hakina-button-background: var(--dusk-color-ice);
+  --hakina-button-accent: var(--dusk-color-cerulean);
+  --hakina-button-text: var(--dusk-color-offwhite);
+  --hakina-button-outline: var(--dusk-color-ice);
+  --hakina-button-hover-background: var(--dusk-color-cerulean);
+  --hakina-button-hover-text: var(--dusk-color-white);
 
   /* ===== INPUT ========================= */
 
@@ -66,33 +66,33 @@ body {
 
   /* --- Feed --- */
 
-  --prism-feed-color: var(--dusk-color-azure);
-  --prism-feed-padding: 24px;
+  --hakina-feed-color: var(--dusk-color-azure);
+  --hakina-feed-padding: 24px;
 
   /* --- Card --- */
 
-  --prism-card-radius: 8px;
-  --prism-card-line-color: var(--dusk-color-azure);
-  --prism-card-line: 1px solid var(--prism-card-line-color);
-  --prism-card-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.04);
-  --prism-card-background: var(--dusk-color-indigo);
+  --hakina-card-radius: 8px;
+  --hakina-card-line-color: var(--dusk-color-azure);
+  --hakina-card-line: 1px solid var(--hakina-card-line-color);
+  --hakina-card-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.04);
+  --hakina-card-background: var(--dusk-color-indigo);
 
   /* --- Menu --- */
 
-  --prism-menu-background: var(--dusk-color-black);
-  --prism-menu-group-background: var(--dusk-color-indigo);
-  --prism-menu-group-border: var(--dusk-color-azure);
-  --prism-menu-item-border: var(--dusk-color-cerulean);
-  --prism-menu-title-color: var(--dusk-color-ice);
-  --prism-menu-item-color: var(--dusk-color-ice);
+  --hakina-menu-background: var(--dusk-color-black);
+  --hakina-menu-group-background: var(--dusk-color-indigo);
+  --hakina-menu-group-border: var(--dusk-color-azure);
+  --hakina-menu-item-border: var(--dusk-color-cerulean);
+  --hakina-menu-title-color: var(--dusk-color-ice);
+  --hakina-menu-item-color: var(--dusk-color-ice);
 
 
   /* --- Demo --- */
 
-  --prism-demo-background: var(--dusk-color-black);
-  --prism-demo-code-background: var(--dusk-color-mist);
-  --prism-demo-display-background: var(--dusk-color-black);
-  --prism-demo-border-color: var(--dusk-color-azure);
+  --hakina-demo-background: var(--dusk-color-black);
+  --hakina-demo-code-background: var(--dusk-color-mist);
+  --hakina-demo-display-background: var(--dusk-color-black);
+  --hakina-demo-border-color: var(--dusk-color-azure);
 
 
 }

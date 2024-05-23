@@ -1,6 +1,6 @@
 import {
   Scroll,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 import Example from "$/blocks/example/Example";
 
 

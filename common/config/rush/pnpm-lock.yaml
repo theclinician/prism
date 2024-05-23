@@ -8,7 +8,7 @@ importers:
 
   .: {}
 
-  ../../packages/prism:
+  ../../packages/ui:
     dependencies:
       solid-element:
         specifier: 1.8.0
@@ -41,12 +41,12 @@ importers:
       '@fontsource/fira-mono':
         specifier: 5.0.8
         version: 5.0.8
+      '@hakina/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       '@solidjs/router':
         specifier: 0.12.4
         version: 0.12.4(solid-js@1.8.15)
-      '@theclinician/prism':
-        specifier: workspace:*
-        version: link:../../packages/prism
       solid-js:
         specifier: 1.8.15
         version: 1.8.15
@@ -1391,15 +1391,6 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /postcss@8.4.33:
-    resolution: {integrity: sha512-Kkpbhhdjw2qQs2O2DGX+8m5OVqEcbB9HRBvuYM9pgrjEFUg30A9LmXNlTAUj4S9kgtGyrMbTzVjH7E+s5Re2yg==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.7
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
-    dev: true
-
   /postcss@8.4.35:
     resolution: {integrity: sha512-u5U8qYpBCpN13BsiEB0CbR1Hhh4Gc0zLFuedrHJKMctHCHAGrMdG0PRM/KErzAL3CU6/eckEtmHNB3x6e3c0vA==}
     engines: {node: ^10 || ^12 || >=14}
@@ -1735,7 +1726,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.19.11
-      postcss: 8.4.33
+      postcss: 8.4.35
       rollup: 4.9.3
       sass: 1.72.0
     optionalDependencies:

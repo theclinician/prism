@@ -1,0 +1,38 @@
+
+
+.demo {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.code {
+  white-space: pre;
+  background: var(--hakina-demo-code-background);
+
+  // border: 1px solid var(--hakina-demo-border-color);
+  // border-bottom: 1px solid var(--hakina-demo-border-color);
+  padding: 16px;
+  font-family: var(--hakina-font-mono);
+  line-height: 24px;
+
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+  max-height: 360px;
+  overflow-y: scroll;
+}
+
+
+.display {
+  background: var(--hakina-demo-display-background);
+
+
+  border-left: 4px solid var(--hakina-demo-border-color);
+
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+  max-height: 360px;
+  overflow-y: scroll;
+}
+

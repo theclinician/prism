@@ -1,0 +1,10 @@
+.label {
+  display: inline-block;
+  font: var(--hakina-label-font);
+  line-height: var(--hakina-label-line-height);
+  color: var(--hakina-label-color);
+  background: var(--hakina-label-background);
+  padding: var(--hakina-label-padding);
+  border-radius: var(--hakina-label-radius);
+
+}

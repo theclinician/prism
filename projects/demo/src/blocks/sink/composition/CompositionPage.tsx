@@ -1,5 +1,4 @@
 import {
-  Button,
   ButtonLook,
   Color,
   Heading3,
@@ -11,7 +10,7 @@ import {
   Feed,
   PaddingSize,
   FeedHeader,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 import { Example } from "$/blocks/example";
 import { useAnchors } from "$/blocks/anchors";
 
@@ -29,71 +28,71 @@ export const Composition = () => {
       </FeedHeader>
 
       <Example code={`
-        <h-stack>
+        <el-h-stack>
           ...
-        </h-stack>
+        </el-h-stack>
       `}>
-        <h-stack>
-          <Button>A</Button>
-          <Button>B</Button>
-          <Button>C</Button>
-        </h-stack>
+        <el-h-stack>
+          <el-button>A</el-button>
+          <el-button>B</el-button>
+          <el-button>C</el-button>
+        </el-h-stack>
       </Example>
 
       <Example code={`
-        <h-stack
+        <el-h-stack
           gap={PaddingSize.MEDIUM}
         >
           ...
-        </h-stack>
+        </el-h-stack>
       `}>
-        <h-stack gap={PaddingSize.MEDIUM}>
-          <Button>A</Button>
-          <Button>B</Button>
-          <Button>C</Button>
-        </h-stack>
+        <el-h-stack gap={PaddingSize.MEDIUM}>
+          <el-button>A</el-button>
+          <el-button>B</el-button>
+          <el-button>C</el-button>
+        </el-h-stack>
       </Example>
 
       <Example code={`
-        <h-stack flip={true}>
+        <el-h-stack flip={true}>
           ...
-        </h-stack>
+        </el-h-stack>
       `}>
-        <h-stack flip={true}>
-          <Button>A</Button>
-          <Button>B</Button>
-          <Button>C</Button>
-        </h-stack>
+        <el-h-stack flip={true}>
+          <el-button>A</el-button>
+          <el-button>B</el-button>
+          <el-button>C</el-button>
+        </el-h-stack>
       </Example>
 
       <Example code={`
-        <v-stack>
+        <el-v-stack>
           ...
-        </v-stack>
+        </el-v-stack>
       `}>
-        <v-stack>
-          <Button>A</Button>
-          <Button>B</Button>
-          <Button>C</Button>
-        </v-stack>
+        <el-v-stack>
+          <el-button>A</el-button>
+          <el-button>B</el-button>
+          <el-button>C</el-button>
+        </el-v-stack>
       </Example>
 
       <Example code={`
-        <z-stack>
+        <el-z-stack>
           ...
-        </z-stack>
+        </el-z-stack>
       `}>
-        <z-stack wide={true}>
+        <el-z-stack wide={true}>
           <h-centered>
-            <Button>Center</Button>
+            <el-button>Center</el-button>
           </h-centered>
-          <z-item>
-            <h-stack wide={true}>
+          <el-z-item>
+            <el-h-stack wide={true}>
               <stack-separator/>
-              <Button>X</Button>
-            </h-stack>
-          </z-item>
-        </z-stack>
+              <el-button>X</el-button>
+            </el-h-stack>
+          </el-z-item>
+        </el-z-stack>
       </Example>
 
 
@@ -102,19 +101,19 @@ export const Composition = () => {
       </FeedHeader>
 
       <Example code={`
-        <h-stack wide={true}>
-          <Button>A</Button>
-          <Button>B</Button>
+        <el-h-stack wide={true}>
+          <el-button>A</el-button>
+          <el-button>B</el-button>
           <stack-separator/>
-          <Button>C</Button>
-        </h-stack>
+          <el-button>C</el-button>
+        </el-h-stack>
       `}>
-        <h-stack wide={true}>
-          <Button>A</Button>
-          <Button>B</Button>
+        <el-h-stack wide={true}>
+          <el-button>A</el-button>
+          <el-button>B</el-button>
           <stack-separator/>
-          <Button>C</Button>
-        </h-stack>
+          <el-button>C</el-button>
+        </el-h-stack>
       </Example>
 
 
@@ -123,47 +122,47 @@ export const Composition = () => {
       </FeedHeader>
 
       <Example code={`
-        <padded-stack>
+        <el-padded-stack>
           ...
-        </padded-stack>
+        </el-padded-stack>
       `}>
-        <padded-stack
+        <el-padded-stack
           styles={{border: "1px dotted red"}}
         >
-          <Button>A</Button>
-          <Button>B</Button>
-          <Button>C</Button>
-        </padded-stack>
+          <el-button>A</el-button>
+          <el-button>B</el-button>
+          <el-button>C</el-button>
+        </el-padded-stack>
       </Example>
 
       <Example code={`
-        <padded-stack padding={PaddingSize.SMALLEST}>
+        <el-padded-stack padding={PaddingSize.SMALLEST}>
           ...
-        </padded-stack>
+        </el-padded-stack>
       `}>
-        <padded-stack
+        <el-padded-stack
           padding={PaddingSize.SMALLEST}
           styles={{border: "1px dotted red"}}
         >
-          <Button>A</Button>
-          <Button>B</Button>
-          <Button>C</Button>
-        </padded-stack>
+          <el-button>A</el-button>
+          <el-button>B</el-button>
+          <el-button>C</el-button>
+        </el-padded-stack>
       </Example>
 
       <Example code={`
-        <padded-stack padding={PaddingSize.LARGEST}>
+        <el-padded-stack padding={PaddingSize.LARGEST}>
           ...
-        </padded-stack>
+        </el-padded-stack>
       `}>
-        <padded-stack
+        <el-padded-stack
           padding={PaddingSize.LARGEST}
           styles={{border: "1px dotted red"}}
         >
-          <Button>A</Button>
-          <Button>B</Button>
-          <Button>C</Button>
-        </padded-stack>
+          <el-button>A</el-button>
+          <el-button>B</el-button>
+          <el-button>C</el-button>
+        </el-padded-stack>
       </Example>
 
 
@@ -177,9 +176,9 @@ export const Composition = () => {
         </h-centered>
       `}>
         <h-centered>
-          <Button>A</Button>
-          <Button>B</Button>
-          <Button>C</Button>
+          <el-button>A</el-button>
+          <el-button>B</el-button>
+          <el-button>C</el-button>
         </h-centered>
       </Example>
 

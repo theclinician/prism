@@ -1,4 +1,4 @@
-import { Demo } from "@theclinician/prism";
+import { Demo } from "@hakina/ui";
 import { JSX,  createMemo,  children as useChildren } from "solid-js";
 import style from "./Example.module.scss";
 import { Token, TokenType, parseCode, trimCode } from "./utils";
@@ -38,9 +38,9 @@ export const Example = (props: {
         ))
       }
     >
-      <padded-stack>
+      <el-padded-stack>
         {c()}
-      </padded-stack>
+      </el-padded-stack>
     </Demo>
   );
 }

@@ -1,5 +1,4 @@
 import {
-  Button,
   ButtonLook,
   Color,
   Heading3,
@@ -12,7 +11,7 @@ import {
   Feed,
   FeedHeader,
   FeedCard,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 import { Example } from "$/blocks/example";
 
 export const ActionPage = () => {
@@ -25,97 +24,97 @@ export const ActionPage = () => {
 
       <Example
         code={`
-          <Button/>
+          <el-button/>
         `}
       >
-        <padded-stack><div>
-          <Button
+        <el-padded-stack><div>
+          <el-button
             look={ButtonLook.GHOST}
           >
             GHOST
-          </Button>
-          <Button
+          </el-button>
+          <el-button
             look={ButtonLook.FILL}
           >
             FILL
-          </Button>
-          <Button
+          </el-button>
+          <el-button
             look={ButtonLook.FLAT}
           >
             FLAT
-          </Button>
-          <Button
+          </el-button>
+          <el-button
             look={ButtonLook.OUTLINE}
           >
             OUTLINE
-          </Button>
-        </div></padded-stack>
+          </el-button>
+        </div></el-padded-stack>
       </Example>
 
       <Example
         code={`
-          <Button disabled/>
+          <el-button disabled/>
         `}
       >
-        <padded-stack>
-          <Button
+        <el-padded-stack>
+          <el-button
             look={ButtonLook.GHOST}
             disabled
           >
             GHOST
-          </Button>
-          <Button
+          </el-button>
+          <el-button
             look={ButtonLook.FILL}
             disabled
           >
             FILL
-          </Button>
-          <Button
+          </el-button>
+          <el-button
             look={ButtonLook.FLAT}
             disabled
           >
             FLAT
-          </Button>
-          <Button
+          </el-button>
+          <el-button
             look={ButtonLook.OUTLINE}
             disabled
           >
             OUTLINE
-          </Button>
-        </padded-stack>
+          </el-button>
+        </el-padded-stack>
       </Example>
 
       <Example
         code={`
-          <Button wide/>
+          <el-button wide/>
         `}
       >
-        <padded-stack><div>
-          <Button
+        <el-padded-stack><div>
+          <el-button
             look={ButtonLook.GHOST}
             wide
           >
             GHOST
-          </Button>
-          <Button
+          </el-button>
+          <el-button
             look={ButtonLook.FILL}
             wide
           >
             FILL
-          </Button>
-          <Button
+          </el-button>
+          <el-button
             look={ButtonLook.FLAT}
             wide
           >
             FLAT
-          </Button>
-          <Button
+          </el-button>
+          <el-button
             look={ButtonLook.OUTLINE}
             wide
           >
             OUTLINE
-          </Button>
-        </div></padded-stack>
+          </el-button>
+        </div></el-padded-stack>
       </Example>
 
 

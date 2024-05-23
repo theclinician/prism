@@ -1,18 +1,16 @@
 import { JSX, children, children as useChildren } from "solid-js";
 import {
-  Button,
   ButtonLook,
   Color,
   Heading3,
   Tabs,
-  Separator,
   Card,
   PaddingSize,
   TBD,
   Menu,
   MenuItem,
   MenuGroup,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 
 
 export type Props = {
@@ -23,14 +21,14 @@ export const AppMenu = (props: Props) => {
     <Menu
       style={{"height": "100%"}}
     >
-      <h-stack>
+      <el-h-stack>
       <img
         src="/prism.png"
         style={{
           width: "50%"
         }}
       />
-      </h-stack>
+      </el-h-stack>
       <Card>
         Prism
         <div>
@@ -125,8 +123,8 @@ export const AppMenu = (props: Props) => {
         <MenuItem href="/theme#fonts">Fonts</MenuItem>
       </MenuGroup>
 
-      <stack-separator/>
-      <padded-stack padding={PaddingSize.LARGEST}/>
+      <el-stack-separator/>
+      <el-padded-stack padding={PaddingSize.LARGEST}/>
     </Menu>
   );
 }

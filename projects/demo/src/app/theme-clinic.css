@@ -65,14 +65,14 @@ body {
 
 
 
-  /* --prism-body-background: var(--clinic-background-base); */
-  /* --prism-body-background: #ff0000; */
+  /* --hakina-body-background: var(--clinic-background-base); */
+  /* --hakina-body-background: #ff0000; */
 
   /*
-  --prism-card-radius: 8px;
-  --prism-card-line: 1px solid var(--clinic-line-default);
-  --prism-card-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.04);
-  --prism-card-background: var(--clinic-background-higher);
+  --hakina-card-radius: 8px;
+  --hakina-card-line: 1px solid var(--clinic-line-default);
+  --hakina-card-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.04);
+  --hakina-card-background: var(--clinic-background-higher);
   */
 
 
@@ -112,65 +112,65 @@ body {
   
   /* ===== UTILS ========================= */
 
-  /* --prism-background-lowest: var(--dusk-color-black);
-  --prism-background-lower: var(--dusk-color-mist);
-  --prism-background-low: var(--dusk-color-indigo);
-  --prism-background-middle: var(--dusk-color-indigo);
-  --prism-background-high: var(--dusk-color-indigo);
-  --prism-background-higher: var(--dusk-color-indigo);
-  --prism-background-highest: var(--dusk-color-indigo);
+  /* --hakina-background-lowest: var(--dusk-color-black);
+  --hakina-background-lower: var(--dusk-color-mist);
+  --hakina-background-low: var(--dusk-color-indigo);
+  --hakina-background-middle: var(--dusk-color-indigo);
+  --hakina-background-high: var(--dusk-color-indigo);
+  --hakina-background-higher: var(--dusk-color-indigo);
+  --hakina-background-highest: var(--dusk-color-indigo);
 
-  --prism-line-high: var(--dusk-color-azure);
+  --hakina-line-high: var(--dusk-color-azure);
 
-  --prism-foreground-low: var(--dusk-color-ice);
-  --prism-foreground-middle: var(--dusk-color-ice);
-  --prism-foreground-high: var(--dusk-color-white); */
+  --hakina-foreground-low: var(--dusk-color-ice);
+  --hakina-foreground-middle: var(--dusk-color-ice);
+  --hakina-foreground-high: var(--dusk-color-white); */
 
 
 
   /* ===== BODY ========================= */
 
-  --prism-body-background: var(--clinic-background-base);
-  --prism-body-font: var(--clinic-font-body-regular);
-  --prism-body-color: var(--clinic-color-black-4);
+  --hakina-body-background: var(--clinic-background-base);
+  --hakina-body-font: var(--clinic-font-body-regular);
+  --hakina-body-color: var(--clinic-color-black-4);
 
-  --prism-font-header: var(--clinic-font-header);
-  --prism-font-body: var(--clinic-font-body);
-  --prism-font-mono: var(--clinic-font-mono);
+  --hakina-font-header: var(--clinic-font-header);
+  --hakina-font-body: var(--clinic-font-body);
+  --hakina-font-mono: var(--clinic-font-mono);
 
 
   /* ===== COMPOSITION ========================= */
 
-  --prism-padding-smallest: 4px;
-  --prism-padding-smaller: 8px;
-  --prism-padding-small: 12px;
-  --prism-padding-medium: 16px;
-  --prism-padding-large: 24px;
-  --prism-padding-larger: 32px;
-  --prism-padding-largest: 40px;
+  --hakina-padding-smallest: 4px;
+  --hakina-padding-smaller: 8px;
+  --hakina-padding-small: 12px;
+  --hakina-padding-medium: 16px;
+  --hakina-padding-large: 24px;
+  --hakina-padding-larger: 32px;
+  --hakina-padding-largest: 40px;
 
 
   /* ===== STATIC ========================= */
 
-  --prism-divider-color: var(--clinic-color-grey-4);
+  --hakina-divider-color: var(--clinic-color-grey-4);
 
-  --prism-label-font: var(--clinic-font-caption-regular);
-  --prism-label-color: var(--clinic-color-blue-3);
-  --prism-label-background: var(--clinic-color-blue-1);
-  --prism-label-radius: 6px;
-  --prism-label-padding: var(--prism-padding-smallest) var(--prism-padding-smaller);
-  --prism-label-line-height: 20px;
+  --hakina-label-font: var(--clinic-font-caption-regular);
+  --hakina-label-color: var(--clinic-color-blue-3);
+  --hakina-label-background: var(--clinic-color-blue-1);
+  --hakina-label-radius: 6px;
+  --hakina-label-padding: var(--hakina-padding-smallest) var(--hakina-padding-smaller);
+  --hakina-label-line-height: 20px;
 
 
 
   /* ===== ACTIONS ========================= */
 
-  --prism-button-background: var(--clinic-color-blue-3);
-  --prism-button-accent: var(--clinic-color-blue-3);
-  --prism-button-text: var(--clinic-text-grey-3);
-  --prism-button-outline: var(--clinic-color-blue-3);
-  --prism-button-hover-background: var(--clinic-color-blue-4);
-  --prism-button-hover-text: var(--clinic-color-grey-2);
+  --hakina-button-background: var(--clinic-color-blue-3);
+  --hakina-button-accent: var(--clinic-color-blue-3);
+  --hakina-button-text: var(--clinic-text-grey-3);
+  --hakina-button-outline: var(--clinic-color-blue-3);
+  --hakina-button-hover-background: var(--clinic-color-blue-4);
+  --hakina-button-hover-text: var(--clinic-color-grey-2);
 
   /* ===== INPUT ========================= */
 
@@ -179,32 +179,32 @@ body {
 
   /* --- Feed --- */
 
-  --prism-feed-color: var(--dusk-color-azure);
-  --prism-feed-padding: 24px;
+  --hakina-feed-color: var(--dusk-color-azure);
+  --hakina-feed-padding: 24px;
 
   /* --- Card --- */
 
-  --prism-card-radius: 8px;
-  --prism-card-line-color: var(--dusk-color-azure);
-  --prism-card-line: 1px solid var(--prism-card-line-color);
-  --prism-card-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.04);
-  --prism-card-background: var(--clinic-color-white-1);
+  --hakina-card-radius: 8px;
+  --hakina-card-line-color: var(--dusk-color-azure);
+  --hakina-card-line: 1px solid var(--hakina-card-line-color);
+  --hakina-card-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.04);
+  --hakina-card-background: var(--clinic-color-white-1);
 
   /* --- Menu --- */
 
-  --prism-menu-background: var(--dusk-color-black);
-  --prism-menu-group-background: var(--dusk-color-indigo);
-  --prism-menu-group-border: var(--dusk-color-azure);
-  --prism-menu-item-border: var(--dusk-color-cerulean);
-  --prism-menu-title-color: var(--dusk-color-ice);
-  --prism-menu-item-color: var(--dusk-color-ice);
+  --hakina-menu-background: var(--dusk-color-black);
+  --hakina-menu-group-background: var(--dusk-color-indigo);
+  --hakina-menu-group-border: var(--dusk-color-azure);
+  --hakina-menu-item-border: var(--dusk-color-cerulean);
+  --hakina-menu-title-color: var(--dusk-color-ice);
+  --hakina-menu-item-color: var(--dusk-color-ice);
 
 
   /* --- Demo --- */
 
-  --prism-demo-code-background: var(--clinic-color-blue-5);
-  --prism-demo-display-background: var(--clinic-color-silver-2);
-  --prism-demo-border-color: var(--clinic-color-blue-2);
+  --hakina-demo-code-background: var(--clinic-color-blue-5);
+  --hakina-demo-display-background: var(--clinic-color-silver-2);
+  --hakina-demo-border-color: var(--clinic-color-blue-2);
 
 
 

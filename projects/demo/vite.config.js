@@ -12,13 +12,14 @@ export default defineConfig(({command, mode}) => ({
     },
   } : {}),
   server: (command === "serve" && mode === "development") ? {
-    host: "prism-local.dev",
+    host: "hakina-local.dev",
     https: {
-      key: fs.readFileSync(`${__dirname}/config/prism-local.dev-key.gitignored.pem`),
-      cert: fs.readFileSync(`${__dirname}/config/prism-local.dev.gitignored.pem`),
+      key: fs.readFileSync(`${__dirname}/config/hakina-local.dev-key.gitignored.pem`),
+      cert: fs.readFileSync(`${__dirname}/config/hakina-local.dev.gitignored.pem`),
     },
     fs: {
       allow: [`${__dirname}`, `${__dirname}/../../common/temp/node_modules`],
+      cachedChecks: false,
     },
   } : {},
   base: '/',

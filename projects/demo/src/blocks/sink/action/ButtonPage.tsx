@@ -1,5 +1,4 @@
 import {
-  Button,
   ButtonLook,
   Color,
   Heading3,
@@ -9,7 +8,7 @@ import {
   TBD,
   Card,
   Modal,
-} from "@theclinician/prism";
+} from "@hakina/ui";
 import { Example } from "$/blocks/example";
 
 export const ButtonPage = () => {
@@ -19,69 +18,69 @@ export const ButtonPage = () => {
 
   return (
     <Card>
-      <padded-stack>
+      <el-padded-stack>
         <Example
           code={`
-            <Button
+            <el-button
               look={ButtonLook.FILL}
               color={Color.PRIMARY}
               onClick={handleClick}
             >
-              Button
-            </Button>
+              el-button
+            </el-button>
           `}
         >
-          <Button
+          <el-button
             look={ButtonLook.FILL}
             color={Color.PRIMARY}
             onClick={handleClick}
           >
             Fill
-          </Button>
+          </el-button>
         </Example>
-        <Button
+        <el-button
           look={ButtonLook.FILL}
           color={Color.PRIMARY}
           disabled
         >
           Disabled
-        </Button>
-      </padded-stack>
-      <padded-stack>
-        <Button
+        </el-button>
+      </el-padded-stack>
+      <el-padded-stack>
+        <el-button
           look={ButtonLook.GHOST}
           color={Color.PRIMARY}
         >
           Ghost
-        </Button>
-        <Button
+        </el-button>
+        <el-button
           look={ButtonLook.GHOST}
           color={Color.PRIMARY}
           disabled
         >
           Disabled
-        </Button>
-      </padded-stack>
-      <padded-stack>
-        <Button
+        </el-button>
+      </el-padded-stack>
+      <el-padded-stack>
+        <el-button
           look={ButtonLook.OUTLINE}
           color={Color.PRIMARY}
         >
           Outline
-        </Button>
-        <Button
+        </el-button>
+        <el-button
           look={ButtonLook.OUTLINE}
           color={Color.NEUTRAL}
         >
           Neutral
-        </Button>
-        <Button
+        </el-button>
+        <el-button
           look={ButtonLook.OUTLINE}
           color={Color.ERROR}
         >
           Error
-        </Button>
-      </padded-stack>
+        </el-button>
+      </el-padded-stack>
     </Card>
   );
 }
