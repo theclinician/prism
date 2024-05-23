@@ -119,7 +119,7 @@ export const Composition = () => {
 
 
       <FeedHeader ref={anchors["padded"]}>
-        padded-stack
+        Padded Stack
       </FeedHeader>
 
       <Example code={`
@@ -127,7 +127,9 @@ export const Composition = () => {
           ...
         </padded-stack>
       `}>
-        <padded-stack>
+        <padded-stack
+          styles={{border: "1px dotted red"}}
+        >
           <Button>A</Button>
           <Button>B</Button>
           <Button>C</Button>
@@ -139,7 +141,10 @@ export const Composition = () => {
           ...
         </padded-stack>
       `}>
-        <padded-stack padding={PaddingSize.SMALLEST}>
+        <padded-stack
+          padding={PaddingSize.SMALLEST}
+          styles={{border: "1px dotted red"}}
+        >
           <Button>A</Button>
           <Button>B</Button>
           <Button>C</Button>
@@ -151,11 +156,31 @@ export const Composition = () => {
           ...
         </padded-stack>
       `}>
-        <padded-stack padding={PaddingSize.LARGEST}>
+        <padded-stack
+          padding={PaddingSize.LARGEST}
+          styles={{border: "1px dotted red"}}
+        >
           <Button>A</Button>
           <Button>B</Button>
           <Button>C</Button>
         </padded-stack>
+      </Example>
+
+
+      <FeedHeader ref={anchors["centered"]}>
+        Centered
+      </FeedHeader>
+
+      <Example code={`
+        <h-centered>
+          ...
+        </h-centered>
+      `}>
+        <h-centered>
+          <Button>A</Button>
+          <Button>B</Button>
+          <Button>C</Button>
+        </h-centered>
       </Example>
 
 

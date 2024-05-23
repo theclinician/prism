@@ -87,3 +87,43 @@ const Button = (allProps: Props & JSX.IntrinsicElements['button']) => {
 }
 
 export default Button;
+
+
+prismElement("a-button", defaultProps, styleText, (props: Props & CompositionProps) => {
+  useParentStyle(props, () => ({
+    width: props.wide ? "100%" : undefined,
+    height: props.tall ? "100%" : undefined,
+  }));
+
+  return (
+    <Dynamic
+      component={props.href ? "a" : "button"}
+      href={props.href ?? undefined}
+      classList={{
+        [style.button]: true,
+        [style.inline]: props.inline,
+        [style.wide]: props.wide,
+        [style.primary]: true,
+      }}
+    >
+      <div
+        classList={{
+          [style.inner]: true,
+
+          [style.fill]: props.look === ButtonLook.FILL,
+          [style.flat]: props.look === ButtonLook.FLAT,
+          [style.ghost]: props.look === ButtonLook.GHOST,
+          [style.outline]: props.look === ButtonLook.OUTLINE,
+
+          [style.small]: props.size === ButtonSize.SMALL,
+          [style.medium]: props.size === ButtonSize.MEDIUM,
+          [style.large]: props.size === ButtonSize.LARGE,
+        }}
+        style={props.innerStyle ?? {}}
+      >
+        <slot/>
+      </div>
+    </Dynamic>
+  );
+});
+

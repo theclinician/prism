@@ -62,7 +62,8 @@ export const AppMenu = (props: Props) => {
       >
         <MenuItem href="/composition#stack">Stack</MenuItem>
         <MenuItem href="/composition#separator">Separator</MenuItem>
-        <MenuItem href="/composition#padded">padded-stack</MenuItem>
+        <MenuItem href="/composition#padded">Padded</MenuItem>
+        <MenuItem href="/composition#centered">Centered</MenuItem>
         <MenuItem href="/composition#props">Composition props</MenuItem>
       </MenuGroup>
 
