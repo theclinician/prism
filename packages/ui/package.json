@@ -1,8 +1,8 @@
 {
   "name": "@hakina/ui",
   "type": "module",
-  "version": "0.1.0",
-  "description": "Component library for Solid.js",
+  "version": "0.0.1",
+  "description": "Framework agnostic component library",
   "license": "MIT",
   "author": {
     "name": "subhog"
